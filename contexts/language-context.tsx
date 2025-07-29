@@ -21,7 +21,7 @@ const translations = {
             brand: "Zyfini Education",
         },
         hero: {
-            title: "Zyfini is Here to Support the Growth of",
+            title: "Zyfini Education",
             flipWords: [
                 "Foster Creativity from an Early Age",
                 "Build Safe & Educational Playgrounds",
@@ -29,7 +29,10 @@ const translations = {
                 "Create Imaginative Environments",
                 "Be Your Education & Family Partner",
             ],
-            words: "Zyfini Education offers complete solutions for indoor & outdoor educational play equipment, home decoration, swings, information boards, and business stands—with a local touch, creativity, and child-friendly design.",
+            words: "Home Decoration",
+            words2: "Educational Toys",
+            words3: "Information Boards",
+            words4: "Business Stands",
             button1: "Our Product",
             button2: "Learn More",
 
@@ -143,7 +146,7 @@ const translations = {
             brand: "Zyfini Edukasi",
         },
         hero: {
-            title: "Zyfini Edukasi Hadir untuk",
+            title: "Zyfini Edukasi",
             flipWords: [
                 "Menumbuhkan Kreativitas Anak Sejak Dini",
                 "Membangun Ruang Bermain Edukatif & Aman",
@@ -151,7 +154,10 @@ const translations = {
                 "Menciptakan Lingkungan Penuh Imajinasi",
                 "Menjadi Mitra Pendidikan & Keluarga Anda",
             ],
-            words: "Zyfini Edukasi menghadirkan solusi lengkap untuk kebutuhan APE indoor & outdoor, dekorasi rumah, ayunan, papan data, hingga stand usaha—dengan sentuhan lokal, kreatif, dan ramah anak.",
+            words: "Dekorasi Rumah",
+            words2: "Mainan Edukatif",
+            words3: "Papan Data",
+            words4: "Stand Usaha",
             button1: "Produk Kami",
             button2: "Pelajari Lebih Lanjut",
         },

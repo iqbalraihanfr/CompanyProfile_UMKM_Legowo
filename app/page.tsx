@@ -13,6 +13,7 @@ import { ImageGallery } from "@/components/ui/image-gallery"
 import { MasonryGallery } from "@/components/ui/masonry-gallery"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
 import { useLanguage } from "@/contexts/language-context"
+import TextType from "@/components/TextType"
 
 import type React from "react"
 
@@ -295,9 +296,12 @@ export default function HomePage() {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative bg-cover bg-center bg-no-repeat"
+        className="w-full min-h-screen px-0 mx-0 relative h-[100vh] flex items-center justify-center"
         style={{
           backgroundImage: "url('/herro.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
         }}
       >
         {/* Overlay transparan navy */}
@@ -309,18 +313,18 @@ export default function HomePage() {
 
               <h1 className="text-display-xl lg:text-[4rem] font-semibold mb-6 leading-tight">
                 {t.hero.title}{" "}
-                <ColorfulTextFlip
-                  words={t.hero.flipWords}
-                  className="text-display-xl lg:text-[5rem] font-semibold"
-                />{" "}
               </h1>
 
-
-
               <div className="mb-12 max-w-3xl mx-auto">
-                <TextGenerateEffect
-                  words={t.hero.words}
+                <TextType
+                  text={[t.hero.words,t.hero.words2,t.hero.words3,t.hero.words4]}
                   className="text-body-lg leading-relaxed"
+                  typingSpeed={100}
+                  pauseDuration={2000}
+                  showCursor={true}
+                  cursorCharacter="|"
+                  deletingSpeed={100}
+                  loop={true}
                 />
               </div>
 
@@ -481,7 +485,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-gradient-to-b from-[#001f3f] to-white px-6 py-20">
+      <section id="contact" className="bg-[#001f3f] px-6 py-20">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal direction="up" className="text-center mb-20">
             <h2 className="text-display-lg font-semibold mb-6 text-text-primary">{t.contact.title}</h2>
