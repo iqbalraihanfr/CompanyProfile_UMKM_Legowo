@@ -6,16 +6,23 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ContainerScrollAnimation } from "@/components/ui/container-scroll-animation"
 import { ContainerTextFlip } from "@/components/ui/container-text-flip"
 import { ColorfulText } from "@/components/ui/colorful-text"
+import { ColorfulTextFlip } from "@/components/ui/colorful-text-flip"
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect"
 import { Timeline } from "@/components/ui/timeline"
 import { ImageGallery } from "@/components/ui/image-gallery"
 import { MasonryGallery } from "@/components/ui/masonry-gallery"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
 import { StaggerContainer, StaggerItem } from "@/components/ui/stagger-container"
+import { useLanguage } from "@/contexts/language-context"
+
 import type React from "react"
 
 export default function HomePage() {
-  const flipWords = ["Future", "Innovation", "Excellence", "Success"]
+  const flipWords = ["Menumbuhkan Kreativitas Anak Sejak Dini",
+    "Membangun Ruang Bermain Edukatif & Aman",
+    "Mendukung Proses Belajar yang Menyenangkan",
+    "Menciptakan Lingkungan Penuh Imajinasi",
+    "Menjadi Mitra Pendidikan & Keluarga Anda"]
 
   // Portfolio state
   const [activeFilter, setActiveFilter] = useState("all")
@@ -41,28 +48,28 @@ export default function HomePage() {
     })
   }
 
+  const { t } = useLanguage()
+
+
+
   // Timeline data for About section
   const timelineData = [
     {
-      title: "Our Mission",
+      title: t.companystory.title1,
       content: (
         <div className="space-y-6">
           <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 bg-accent-primary/10 rounded-xl flex items-center justify-center border border-accent-primary/20">
-              <span className="text-accent-primary font-bold text-lg">M</span>
-            </div>
             <div>
-              <h4 className="text-heading-lg font-semibold text-text-primary mb-3">Empowering Business Growth</h4>
+              <h4 className="text-heading-lg font-semibold text-text-primary mb-3">{t.companystory.words3}</h4>
               <p className="text-body-md text-text-secondary leading-relaxed mb-4">
-                To empower businesses with innovative technology solutions that drive growth and efficiency. We believe
-                technology should be an enabler, not a barrier to success.
+                {t.companystory.words4}
               </p>
               <ul className="space-y-2">
                 {[
-                  "Drive digital transformation",
-                  "Increase operational efficiency",
-                  "Enable scalable growth",
-                  "Foster innovation culture",
+                  t.companystory.list1,
+                  t.companystory.list2,
+                  t.companystory.list3,
+                  t.companystory.list4,
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center text-body-sm text-text-secondary">
                     <span className="w-2 h-2 bg-accent-primary rounded-full mr-3 shrink-0"></span>
@@ -76,37 +83,37 @@ export default function HomePage() {
       ),
     },
     {
-      title: "Our Values",
+      title: t.companystory.title2,
       content: (
         <div className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
                 letter: "I",
-                title: "Innovation",
-                description: "Continuous learning and staying ahead of technology trends",
+                title: t.companystory.cardtitle1,
+                description: t.companystory.wordtitle1,
               },
               {
-                letter: "C",
-                title: "Client Success",
-                description: "Your success is our priority and measure of achievement",
+                letter: "F",
+                title: t.companystory.cardtitle2,
+                description: t.companystory.wordtitle2,
               },
               {
-                letter: "E",
-                title: "Excellence",
-                description: "Quality and attention to detail in everything we do",
+                letter: "K",
+                title: t.companystory.cardtitle3,
+                description: t.companystory.wordtitle3,
               },
               {
                 letter: "T",
-                title: "Integrity",
-                description: "Transparency and open communication in all relationships",
+                title: t.companystory.cardtitle4,
+                description: t.companystory.wordtitle5,
               },
             ].map((value, idx) => (
-              <div key={idx} className="p-6 bg-background-secondary rounded-xl border border-border-primary">
+              <div key={idx} className="p-6 bg-[#ffff] rounded-xl border border-border-primary">
                 <div className="w-8 h-8 bg-accent-primary/10 rounded-lg flex items-center justify-center mb-3 border border-accent-primary/20">
                   <span className="text-accent-primary font-bold">{value.letter}</span>
                 </div>
-                <h5 className="text-heading-md font-semibold text-text-primary mb-2">{value.title}</h5>
+                <h5 className="text-heading-md font-semibold text-[#001f3f] mb-2">{value.title}</h5>
                 <p className="text-body-sm text-text-secondary leading-relaxed">{value.description}</p>
               </div>
             ))}
@@ -115,33 +122,29 @@ export default function HomePage() {
       ),
     },
     {
-      title: "Our Vision",
+      title: t.companystory.title3,
       content: (
         <div className="space-y-6">
           <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 bg-accent-primary/10 rounded-xl flex items-center justify-center border border-accent-primary/20">
-              <span className="text-accent-primary font-bold text-lg">V</span>
-            </div>
             <div>
-              <h4 className="text-heading-lg font-semibold text-text-primary mb-3">Shaping the Digital Future</h4>
-              <p className="text-body-md text-text-secondary leading-relaxed mb-6">
-                To be the leading technology partner for businesses worldwide, shaping the digital future through
-                innovative solutions and exceptional service delivery.
+              <h4 className="text-heading-lg font-semibold text-text-primary mb-3">{t.companystory.wordtitle5}</h4>
+              <p className="text-body-md text-[#dedede] leading-relaxed mb-6">
+                {t.companystory.wordtitle6}
               </p>
-              <div className="bg-accent-primary/5 rounded-xl p-6 border border-accent-primary/20">
-                <h5 className="text-heading-md font-semibold text-text-primary mb-3">2030 Goals</h5>
+              <div className="bg-[#ffff] rounded-xl p-6">
+                <h5 className="text-heading-md font-semibold text-[#b0b0b0] mb-3">{t.companystory.wordtitle5}</h5>
                 <div className="grid md:grid-cols-3 gap-4 text-center">
                   <div>
-                    <div className="text-heading-xl font-semibold text-accent-primary">1000+</div>
-                    <div className="text-body-sm text-text-secondary">Global Clients</div>
+                    <div className="text-heading-xl font-semibold text-accent-primary">50+</div>
+                    <div className="text-body-sm text-text-secondary">{t.companystory.wordtitle13}</div>
                   </div>
                   <div>
                     <div className="text-heading-xl font-semibold text-accent-primary">50+</div>
-                    <div className="text-body-sm text-text-secondary">Countries</div>
+                    <div className="text-body-sm text-text-secondary">{t.companystory.wordtitle14}</div>
                   </div>
                   <div>
                     <div className="text-heading-xl font-semibold text-accent-primary">100+</div>
-                    <div className="text-body-sm text-text-secondary">Team Members</div>
+                    <div className="text-body-sm text-text-secondary">{t.companystory.wordtitle15}</div>
                   </div>
                 </div>
               </div>
@@ -151,30 +154,28 @@ export default function HomePage() {
       ),
     },
     {
-      title: "Our Team",
+      title: t.companystory.title4,
       content: (
         <div className="space-y-6">
           <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 bg-accent-primary/10 rounded-xl flex items-center justify-center border border-accent-primary/20">
-              <span className="text-accent-primary font-bold text-lg">T</span>
-            </div>
             <div>
               <h4 className="text-heading-lg font-semibold text-text-primary mb-3">
-                Diverse & Passionate Professionals
+                {t.companystory.wordtitle7}
               </h4>
-              <p className="text-body-md text-text-secondary leading-relaxed mb-6">
-                A diverse group of passionate professionals dedicated to delivering exceptional results. Our team
-                combines technical expertise with creative problem-solving to tackle complex challenges.
+              <p className="text-body-md text-[#dedede] leading-relaxed mb-6">
+                {t.companystory.wordtitle8}
               </p>
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="p-4 bg-background-secondary rounded-lg border border-border-primary">
-                  <h5 className="text-heading-md font-semibold text-text-primary mb-2">Technical Excellence</h5>
-                  <p className="text-body-sm text-text-secondary">Expert developers, architects, and engineers</p>
+                <div className="p-4 bg-[#ffff]">
+                  <h5 className="text-heading-md font-semibold text-[#001f3f] mb-2">  {t.companystory.wordtitle9}</h5>
+                  <p className="text-body-sm text-text-secondary">{t.companystory.wordtitle10}</p>
                 </div>
-                <div className="p-4 bg-background-secondary rounded-lg border border-border-primary">
-                  <h5 className="text-heading-md font-semibold text-text-primary mb-2">Creative Innovation</h5>
+                <div className="p-4 bg-[#ffff]">
+                  <h5 className="text-heading-md font-semibold text-[#001f3f] mb-2"> {t.companystory.wordtitle11}</h5>
                   <p className="text-body-sm text-text-secondary">
-                    Designers and strategists who think outside the box
+                    {t.companystory.wordtitle12}
+
+
                   </p>
                 </div>
               </div>
@@ -189,97 +190,97 @@ export default function HomePage() {
   const portfolioImages = [
     {
       id: "1",
-      src: "/placeholder.svg?height=400&width=600",
-      title: "E-Commerce Platform",
-      category: "Web Development",
+      src: "/produk12.JPG",
+      title: "",
+      category: "",
       height: 300,
       description: "Modern e-commerce platform with advanced analytics and user management",
     },
     {
       id: "2",
-      src: "/placeholder.svg?height=500&width=600",
-      title: "FinTech Mobile App",
-      category: "Mobile Development",
+      src: "/produk9.JPG",
+      title: "",
+      category: "",
       height: 400,
       description: "Secure financial mobile application with biometric authentication",
     },
     {
       id: "3",
-      src: "/placeholder.svg?height=350&width=600",
-      title: "AI Analytics Dashboard",
-      category: "AI/ML",
+      src: "/produk8.JPG",
+      title: "",
+      category: "",
       height: 280,
       description: "Machine learning dashboard for predictive analytics and data visualization",
     },
     {
       id: "4",
-      src: "/placeholder.svg?height=450&width=600",
-      title: "Cloud Infrastructure",
-      category: "Cloud Solutions",
+      src: "/produk11.JPG",
+      title: "",
+      category: "",
       height: 360,
       description: "Scalable cloud architecture for enterprise-level applications",
     },
     {
       id: "5",
-      src: "/placeholder.svg?height=380&width=600",
-      title: "Design System",
-      category: "UI/UX Design",
+      src: "/produk7.JPG",
+      title: "",
+      category: "",
       height: 320,
       description: "Comprehensive design system with reusable components and guidelines",
     },
     {
       id: "6",
-      src: "/placeholder.svg?height=340&width=600",
-      title: "Healthcare Platform",
-      category: "Web Development",
+      src: "/produk6.JPG",
+      title: "",
+      category: "",
       height: 340,
       description: "Patient management system with telemedicine capabilities",
     },
     {
       id: "7",
-      src: "/placeholder.svg?height=290&width=600",
-      title: "Logistics Tracker",
-      category: "Mobile Development",
+      src: "/produk5.JPG",
+      title: "",
+      category: "",
       height: 290,
       description: "Real-time logistics tracking application with GPS integration",
     },
     {
       id: "8",
-      src: "/placeholder.svg?height=380&width=600",
-      title: "Data Visualization",
-      category: "AI/ML",
+      src: "/produk4.JPG",
+      title: "",
+      category: "",
       height: 380,
       description: "Interactive data visualization platform for business intelligence",
     },
     {
       id: "9",
-      src: "/placeholder.svg?height=260&width=600",
-      title: "Microservices Setup",
-      category: "Cloud Solutions",
+      src: "/produk3.JPG",
+      title: "",
+      category: "",
       height: 260,
       description: "Containerized microservices architecture with auto-scaling",
     },
     {
       id: "10",
-      src: "/placeholder.svg?height=350&width=600",
-      title: "Brand Identity",
-      category: "UI/UX Design",
+      src: "/produk2.JPG",
+      title: "",
+      category: "",
       height: 350,
       description: "Complete brand identity design with logo and visual guidelines",
     },
     {
       id: "11",
-      src: "/placeholder.svg?height=310&width=600",
-      title: "Social Platform",
-      category: "Web Development",
+      src: "/produk1.JPG",
+      title: "",
+      category: "",
       height: 310,
       description: "Social networking platform with real-time messaging and content sharing",
     },
     {
       id: "12",
-      src: "/placeholder.svg?height=370&width=600",
-      title: "IoT Dashboard",
-      category: "AI/ML",
+      src: "/produk10.JPG",
+      title: "",
+      category: "",
       height: 370,
       description: "IoT device monitoring and control dashboard with predictive maintenance",
     },
@@ -290,116 +291,129 @@ export default function HomePage() {
     activeFilter === "all" ? portfolioImages : portfolioImages.filter((img) => img.category === activeFilter)
 
   return (
+
     <div className="min-h-screen bg-background-primary">
       {/* Hero Section */}
-      <section id="home" className="pt-20">
-        <ContainerScrollAnimation>
-          <div className="px-6 py-20 lg:py-32">
-            <div className="max-w-6xl mx-auto text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-background-tertiary rounded-full text-body-sm mb-8 border border-border-primary">
-                <span className="text-accent-primary font-medium">Introducing TechVision 2024</span>
-              </div>
+      <section
+        id="home"
+        className="relative bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/herro.jpg')",
+        }}
+      >
+        {/* Overlay transparan navy */}
+        <div className="absolute inset-0 bg-[#001f3f] opacity-75 z-0" />
 
-              <h1 className="text-display-xl lg:text-[5rem] font-semibold mb-6 text-text-primary leading-tight">
-                Building the{" "}
-                <ContainerTextFlip words={flipWords} className="text-display-xl lg:text-[5rem] font-semibold" /> of{" "}
-                <ColorfulText text="Technology" className="text-display-xl lg:text-[5rem] font-semibold" />
+        <ContainerScrollAnimation>
+          <div className="mt-25 px-6 py-20 lg:py-15">
+            <div className="max-w-4xl mx-auto text-center">
+
+              <h1 className="text-display-xl lg:text-[4rem] font-semibold mb-6 leading-tight">
+                {t.hero.title}{" "}
+                <ColorfulTextFlip
+                  words={t.hero.flipWords}
+                  className="text-display-xl lg:text-[5rem] font-semibold"
+                />{" "}
               </h1>
+
+
 
               <div className="mb-12 max-w-3xl mx-auto">
                 <TextGenerateEffect
-                  words="We create innovative digital solutions that transform businesses and empower teams to achieve extraordinary results in the modern world."
+                  words={t.hero.words}
                   className="text-body-lg leading-relaxed"
                 />
               </div>
+
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                 <button
                   onClick={() => document.querySelector("#portfolio")?.scrollIntoView({ behavior: "smooth" })}
                   className="bg-accent-primary hover:bg-accent-hover text-white font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring inline-flex items-center justify-center"
                 >
-                  Explore Our Work
+                  {t.hero.button1}
                 </button>
                 <button
                   onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}
-                  className="border border-border-secondary hover:bg-background-tertiary text-text-primary font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring bg-transparent"
+                  className="border border-white bg-transparent text-[#ffff] hover:bg-[#ffff] hover:text-accent-primary font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring"
+
                 >
-                  Learn More
+                  {t.hero.button2}
                 </button>
               </div>
             </div>
           </div>
         </ContainerScrollAnimation>
+      </section>
 
-        {/* Stats Section */}
-        <ScrollReveal direction="up" className="px-6 py-16 bg-background-secondary">
+      {/* Stats Section */}
+      <section className="bg-[#c2c4c8]">
+        <ScrollReveal direction="up" className="px-6 py-16 bg-[#ffff]">
           <StaggerContainer className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: "500+", label: "Projects Completed" },
-              { number: "50+", label: "Happy Clients" },
-              { number: "5+", label: "Years Experience" },
-              { number: "24/7", label: "Support Available" },
+              { number: "500+", label: t.statsec.label1 },
+              { number: "100+", label: t.statsec.label2 },
+              { number: "5+", label: t.statsec.label3 },
+              { number: "24/7", label: t.statsec.label4 },
             ].map((stat, index) => (
               <StaggerItem
                 key={index}
-                className="text-center p-6 rounded-xl bg-background-tertiary border border-border-primary hover:border-accent-primary/30 transition-colors duration-200"
+                className="text-center p-6 rounded-xl bg-[#001f3f] border border-border-primary hover:border-accent-primary/30 transition-colors duration-200"
               >
                 <div className="text-display-sm font-semibold text-accent-primary mb-2">{stat.number}</div>
-                <div className="text-body-sm text-text-secondary font-medium">{stat.label}</div>
+                <div className="text-body-sm text-[#ffff] font-medium">{stat.label}</div>
               </StaggerItem>
             ))}
           </StaggerContainer>
         </ScrollReveal>
-
-        {/* Features Section */}
-        <ScrollReveal direction="up" delay={0.2} className="px-6 py-20">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-display-md font-semibold mb-6 text-text-primary">Why Choose TechVision?</h2>
-              <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-                We combine cutting-edge technology with creative solutions to deliver exceptional results for our
-                clients.
-              </p>
-            </div>
-
-            <StaggerContainer className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Innovation First",
-                  description: "We stay ahead of technology trends to provide you with the most advanced solutions.",
-                },
-                {
-                  title: "Client-Focused",
-                  description: "Your success is our priority. We work closely with you to achieve your goals.",
-                },
-                {
-                  title: "Proven Results",
-                  description: "Our track record speaks for itself with 500+ successful projects delivered.",
-                },
-              ].map((item, index) => (
-                <StaggerItem
-                  key={index}
-                  className="p-8 rounded-xl bg-background-secondary border border-border-primary hover:border-accent-primary/30 transition-all duration-200 group"
-                >
-                  <h3 className="text-heading-xl font-semibold mb-4 text-accent-primary group-hover:text-accent-hover transition-colors duration-200">
-                    {item.title}
-                  </h3>
-                  <p className="text-body-md text-text-secondary leading-relaxed">{item.description}</p>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
+      </section>
+      {/* Features Section */}
+      <section className="bg-[#ffff]">        <ScrollReveal direction="up" delay={0.2} className="bg-[#ffff] px-6 py-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-display-md font-semibold mb-6 text-[#001f3f]">{t.featuressec.title}</h2>
+            <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+              {t.featuressec.words}
+            </p>
           </div>
-        </ScrollReveal>
+
+          <StaggerContainer className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: t.featuressec.cardtitle1,
+                description: t.featuressec.cardwords1,
+              },
+              {
+                title: t.featuressec.cardtitle2,
+                description: t.featuressec.cardwords2,
+              },
+              {
+                title: t.featuressec.cardtitle3,
+                description: t.featuressec.cardwords3,
+              },
+            ].map((item, index) => (
+              <StaggerItem
+                key={index}
+                className="p-8 rounded-xl bg-[#001f3f] border border-border-primary hover:border-accent-primary/30 transition-all duration-200 group"
+              >
+                <h3 className="text-heading-xl font-semibold mb-4 text-accent-primary group-hover:text-accent-hover transition-colors duration-200">
+                  {item.title}
+                </h3>
+                <p className="text-body-md text-[#ffff] leading-relaxed">{item.description}</p>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </ScrollReveal>
       </section>
 
       {/* About Section */}
-      <section id="about" className="px-6 py-20 bg-background-secondary">
+      <section id="about" className="px-6 py-20 bg-gradient-to-b from-[#001f3f] to-white">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal direction="up" className="text-center mb-20">
-            <h2 className="text-display-lg font-semibold mb-6 text-text-primary">About TechVision</h2>
+            <h2 className="text-display-lg font-semibold mb-6 text-text-primary">{t.aboutsec.title}</h2>
             <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              Founded in 2019, TechVision has been at the forefront of digital innovation, helping businesses transform
-              their operations through cutting-edge technology solutions.
+              {t.aboutsec.words}
             </p>
           </ScrollReveal>
 
@@ -410,100 +424,32 @@ export default function HomePage() {
           {/* Company Story */}
           <ScrollReveal direction="up" delay={0.4} className="mt-20 grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-display-sm font-semibold mb-8 text-text-primary">Our Story</h3>
+              <h3 className="text-display-sm font-semibold mb-8 text-[#001f3f]">{t.companystory.title0}</h3>
               <div className="space-y-6 text-body-md text-text-secondary leading-relaxed">
                 <p>
-                  TechVision was born from a simple idea: technology should empower businesses, not complicate them. Our
-                  founders, with decades of combined experience in software development and business strategy,
-                  recognized the gap between cutting-edge technology and practical business applications.
+                  {t.companystory.words1}
                 </p>
                 <p>
-                  Since our inception, we've grown from a small startup to a trusted technology partner for companies
-                  ranging from innovative startups to established enterprises. Our commitment to excellence and client
-                  satisfaction has been the driving force behind our success.
+                  {t.companystory.words2}
                 </p>
               </div>
             </div>
-            <div className="bg-background-primary rounded-xl p-8 border border-border-primary">
-              <h4 className="text-heading-xl font-semibold mb-6 text-text-primary">Company Milestones</h4>
-              <div className="space-y-4">
-                {[
-                  { year: "2019", event: "TechVision founded in San Francisco" },
-                  { year: "2020", event: "First 50 projects completed" },
-                  { year: "2021", event: "Expanded to serve international clients" },
-                  { year: "2022", event: "Reached 200+ successful projects" },
-                  { year: "2023", event: "Launched AI/ML division" },
-                  { year: "2024", event: "500+ projects milestone achieved" },
-                ].map((milestone, index) => (
-                  <div key={index} className="flex items-center space-x-4">
-                    <div className="w-16 h-8 bg-accent-primary/10 rounded-lg flex items-center justify-center border border-accent-primary/20">
-                      <span className="text-body-sm font-semibold text-accent-primary">{milestone.year}</span>
-                    </div>
-                    <span className="text-body-sm text-text-secondary">{milestone.event}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="rounded-xl p-8 flex items-center justify-center">
+              <img src="/logow.png" alt="Zyfini Logo" className="h-90 w-auto" />
             </div>
+
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="px-6 py-20">
+      {/* Gallery Section */}
+      <section id="portfolio" className="bg-[#ffff] px-6 py-20">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal direction="up" className="text-center mb-16">
-            <h2 className="text-display-lg font-semibold mb-6 text-text-primary">Our Portfolio</h2>
+            <h2 className="text-display-lg font-semibold mb-6 text-[#001f3f]">  {t.gallerysec.title}</h2>
             <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              Explore our collection of successful projects across various industries and technologies. Each project
-              represents our commitment to excellence and innovation.
+              {t.gallerysec.words}
             </p>
-          </ScrollReveal>
-
-          {/* Filters and View Toggle */}
-          <ScrollReveal
-            direction="up"
-            delay={0.2}
-            className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6"
-          >
-            <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setActiveFilter(category)}
-                  className={`px-4 py-2 rounded-lg text-body-sm font-medium transition-all duration-200 ${
-                    activeFilter === category
-                      ? "bg-accent-primary text-white"
-                      : "bg-background-secondary text-text-secondary hover:bg-background-tertiary hover:text-text-primary border border-border-primary"
-                  }`}
-                >
-                  {category === "all" ? "All Projects" : category}
-                </button>
-              ))}
-            </div>
-
-            <div className="flex items-center gap-4">
-              <span className="text-body-sm text-text-secondary">View:</span>
-              <div className="flex bg-background-secondary rounded-lg p-1 border border-border-primary">
-                <button
-                  onClick={() => setViewMode("grid")}
-                  className={`px-3 py-1 rounded-md text-body-sm font-medium transition-colors duration-200 ${
-                    viewMode === "grid" ? "bg-accent-primary text-white" : "text-text-secondary hover:text-text-primary"
-                  }`}
-                >
-                  Grid
-                </button>
-                <button
-                  onClick={() => setViewMode("masonry")}
-                  className={`px-3 py-1 rounded-md text-body-sm font-medium transition-colors duration-200 ${
-                    viewMode === "masonry"
-                      ? "bg-accent-primary text-white"
-                      : "text-text-secondary hover:text-text-primary"
-                  }`}
-                >
-                  Masonry
-                </button>
-              </div>
-            </div>
           </ScrollReveal>
 
           {/* Gallery */}
@@ -515,66 +461,47 @@ export default function HomePage() {
             )}
           </ScrollReveal>
 
-          {/* Portfolio Stats */}
-          <ScrollReveal direction="up" delay={0.4}>
-            <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 p-8 bg-background-secondary rounded-xl border border-border-primary">
-              {[
-                { number: "500+", label: "Projects Completed" },
-                { number: "50+", label: "Happy Clients" },
-                { number: "15+", label: "Industries Served" },
-                { number: "99%", label: "Client Satisfaction" },
-              ].map((stat, index) => (
-                <StaggerItem key={index} className="text-center">
-                  <div className="text-display-sm font-semibold text-accent-primary mb-2">{stat.number}</div>
-                  <div className="text-body-sm text-text-secondary font-medium">{stat.label}</div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          </ScrollReveal>
-
           {/* Portfolio CTA */}
           <ScrollReveal
             direction="up"
             delay={0.5}
-            className="text-center bg-background-secondary rounded-xl p-8 lg:p-12 border border-border-primary"
+            className="text-center bg-[#001f3f] rounded-xl p-8 lg:p-12 border border-border-primary"
           >
-            <h3 className="text-display-sm font-semibold mb-6 text-text-primary">Want to See More?</h3>
+            <h3 className="text-display-sm font-semibold mb-6 text-text-primary">{t.portocta.title}</h3>
             <p className="text-body-lg text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
-              This is just a glimpse of our work. Visit our complete portfolio to explore more projects, case studies,
-              and detailed project breakdowns.
+              {t.portocta.words}
             </p>
             <Button
               className="bg-accent-primary hover:bg-accent-hover text-white font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring"
               onClick={() => window.open("https://portfolio.techvision.com", "_blank")}
             >
-              See Full Catalog
+              {t.portocta.button}
             </Button>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="px-6 py-20 bg-background-secondary">
+      <section id="contact" className="bg-gradient-to-b from-[#001f3f] to-white px-6 py-20">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal direction="up" className="text-center mb-20">
-            <h2 className="text-display-lg font-semibold mb-6 text-text-primary">Get In Touch</h2>
+            <h2 className="text-display-lg font-semibold mb-6 text-text-primary">{t.contact.title}</h2>
             <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how
-              we can help you achieve your goals.
+              {t.contact.subtitle}
             </p>
           </ScrollReveal>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <ScrollReveal direction="left" delay={0.2}>
-              <Card className="bg-background-primary border-border-primary">
+              <Card className="bg-[#f1ecec] border-border-primary">
                 <CardContent className="p-8">
-                  <h3 className="text-heading-xl font-semibold mb-8 text-text-primary">Send us a message</h3>
+                  <h3 className="text-heading-xl font-semibold mb-8 text-[#001f3f]"> {t.contact.formTitle}</h3>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-body-md font-medium text-text-primary mb-3">
-                          Name *
+                        <label htmlFor="name" className="block text-body-md font-medium text-[#001f3f] mb-3">
+                          {t.contact.name}
                         </label>
                         <input
                           type="text"
@@ -588,8 +515,8 @@ export default function HomePage() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-body-md font-medium text-text-primary mb-3">
-                          Email *
+                        <label htmlFor="email" className="block text-body-md font-medium text-[#001f3f] mb-3">
+                          {t.contact.email}
                         </label>
                         <input
                           type="email"
@@ -605,8 +532,8 @@ export default function HomePage() {
                     </div>
 
                     <div>
-                      <label htmlFor="company" className="block text-body-md font-medium text-text-primary mb-3">
-                        Company
+                      <label htmlFor="company" className="block text-body-md font-medium text-[#001f3f] mb-3">
+                        {t.contact.company}
                       </label>
                       <input
                         type="text"
@@ -620,8 +547,8 @@ export default function HomePage() {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-body-md font-medium text-text-primary mb-3">
-                        Message *
+                      <label htmlFor="message" className="block text-body-md font-medium text-[#001f3f] mb-3">
+                        {t.contact.message}
                       </label>
                       <textarea
                         id="message"
@@ -639,7 +566,7 @@ export default function HomePage() {
                       type="submit"
                       className="w-full bg-accent-primary hover:bg-accent-hover text-white font-medium text-body-lg py-4 rounded-lg transition-all duration-200 focus-ring"
                     >
-                      Send Message
+                      {t.contact.button}
                     </Button>
                   </form>
                 </CardContent>
@@ -649,31 +576,32 @@ export default function HomePage() {
             {/* Contact Information */}
             <ScrollReveal direction="right" delay={0.2} className="space-y-8">
               <div>
-                <h3 className="text-heading-xl font-semibold mb-8 text-text-primary">Contact Information</h3>
+                <h3 className="text-heading-xl font-semibold mb-8 text-text-primary">{t.contact.infoTitle}</h3>
                 <StaggerContainer className="space-y-6">
                   {[
                     {
-                      label: "Email",
-                      value: "hello@techvision.com",
-                      description: "Send us an email anytime",
+                      label: t.contact.address,
+                      value: "Jalan Peltu Wagiso, RT.02/RW.01, Kebaron, Tulangan, Sidoarjo, Tulangan, Jawa Timur, 61273",
+                      description: "",
                     },
                     {
-                      label: "Phone",
-                      value: "+1 (555) 123-4567",
-                      description: "Mon-Fri from 8am to 5pm",
+                      label: t.contact.email,
+                      value: "rusianaa965@gmail.com",
+                      description: "",
                     },
                     {
-                      label: "Office",
-                      value: "San Francisco, CA",
-                      description: "123 Tech Street, Suite 100",
+                      label: t.contact.contact,
+                      value: "+62 8121 767 4477",
+                      description: "",
                     },
+
                   ].map((contact, index) => (
                     <StaggerItem
                       key={index}
-                      className="p-6 bg-background-primary rounded-lg border border-border-primary"
+                      className="p-6 bg-[#f1ecec] rounded-lg border border-border-primary"
                     >
-                      <h4 className="text-heading-lg font-semibold text-text-primary">{contact.label}</h4>
-                      <p className="text-body-md text-text-primary font-medium">{contact.value}</p>
+                      <h4 className="text-heading-lg font-semibold text-[#001f3f]">{contact.label}</h4>
+                      <p className="text-body-md text-[#001f3f] font-medium">{contact.value}</p>
                       <p className="text-body-sm text-text-secondary">{contact.description}</p>
                     </StaggerItem>
                   ))}
@@ -681,58 +609,65 @@ export default function HomePage() {
               </div>
 
               {/* Office Hours */}
-              <Card className="bg-background-primary border-border-primary">
+              <Card className="bg-[#f1ecec] border-border-primary">
                 <CardContent className="p-6">
-                  <h4 className="text-heading-lg font-semibold text-text-primary mb-4">Office Hours</h4>
+                  <h4 className="text-heading-lg font-semibold text-[#001f3f] mb-4">{t.contact.officeHours}</h4>
                   <div className="space-y-3 text-body-md">
                     <div className="flex justify-between text-text-secondary">
-                      <span>Monday - Friday</span>
-                      <span className="text-text-primary font-medium">8:00 AM - 5:00 PM</span>
+                      <span>{t.contact.days.monday}</span>
+                      <span className="text-[#001f3f] font-medium">8:00 AM - 5:00 PM</span>
                     </div>
                     <div className="flex justify-between text-text-secondary">
-                      <span>Saturday</span>
-                      <span className="text-text-primary font-medium">9:00 AM - 2:00 PM</span>
+                      <span>{t.contact.days.saturday}</span>
+                      <span className="text-[#001f3f] font-medium">9:00 AM - 2:00 PM</span>
                     </div>
                     <div className="flex justify-between text-text-secondary">
-                      <span>Sunday</span>
-                      <span className="text-text-primary font-medium">Closed</span>
+                      <span>{t.contact.days.sunday}</span>
+                      <span className="text-[#001f3f]  font-medium">{t.contact.days.closed}</span>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Quick Response */}
-              <Card className="bg-accent-primary/5 border-accent-primary/20">
-                <CardContent className="p-6">
-                  <h4 className="text-heading-lg font-semibold mb-3 text-text-primary">Quick Response</h4>
-                  <p className="text-body-md text-text-secondary mb-4 leading-relaxed">
-                    Need immediate assistance? We typically respond to all inquiries within 24 hours.
-                  </p>
-                  <p className="text-body-sm text-accent-primary font-medium">
-                    For urgent matters, please call us directly.
-                  </p>
-                </CardContent>
+              <Card className="overflow-hidden h-[350px] border-accent-primary/20">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425.282431328586!2d112.62285067431763!3d-7.485680873816443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e026095e88e5%3A0xca152be7c293b8fb!2sJl.%20Peltu%20Wagiso%2C%20Kebaron%2C%20Kec.%20Tulangan%2C%20Kabupaten%20Sidoarjo%2C%20Jawa%20Timur%2061273!5e1!3m2!1sid!2sid!4v1753679255315!5m2!1sid!2sid"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </Card>
+
+
             </ScrollReveal>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <ScrollReveal direction="up" className="border-t border-border-primary px-6 py-12 bg-background-primary">
+      <ScrollReveal direction="up" className="border-t border-border-primary px-6 py-12 bg-[#001f3f] ">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-3 mb-6">
-            <div className="w-8 h-8 bg-accent-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">T</span>
+            <div className="w-10 h-10 bg-accent-primary rounded-xl flex items-center justify-center group-hover:bg-accent-hover transition-colors duration-200 overflow-hidden">
+              <img
+                src="/logow.png" // ganti dengan path/logo sesuai projekmu
+                alt="Logo Zyfini"
+                className="w-6 h-6 object-contain"
+              />
             </div>
-            <span className="text-heading-lg font-semibold text-text-primary">TechVision</span>
+            <span className="text-heading-lg font-semibold text-[#ffff]">{t.footer.title}</span>
           </div>
           <p className="text-body-md text-text-secondary mb-6">
-            Building the future of technology, one project at a time.
+            {t.footer.subtitle}
           </p>
-          <div className="text-body-sm text-text-secondary">© 2024 TechVision. All rights reserved.</div>
+          <div className="text-body-sm text-text-secondary">© 2025 Zyfini Edukasi. All rights reserved.</div>
         </div>
       </ScrollReveal>
-    </div>
+    </div >
   )
 }
+

@@ -1,16 +1,29 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  const { t, setLanguage, language } = useLanguage()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#portfolio", label: "Portfolio" },
-    { href: "#contact", label: "Contact" },
+    { href: "#home", label: t.nav.home },
+    { href: "#about", label: t.nav.about },
+    { href: "#portfolio", label: t.nav.portfolio },
+    { href: "#contact", label: t.nav.contact },
   ]
 
   const scrollToSection = (href: string) => {
@@ -22,14 +35,24 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 w-full z-50 border-b border-border-primary backdrop-blur-xs bg-background-primary/95">
+    <nav
+      className={`fixed top-0 w-full z-50 transition-colors duration-300 ${scrolled ? "bg-white" : "bg-transparent"
+        }`}
+    >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button onClick={() => scrollToSection("#home")} className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-accent-primary rounded-xl flex items-center justify-center group-hover:bg-accent-hover transition-colors duration-200">
-              <span className="text-white font-bold text-lg">T</span>
+            <div className="w-10 h-10 bg-accent-primary rounded-xl flex items-center justify-center group-hover:bg-accent-hover transition-colors duration-200 overflow-hidden">
+              <img
+                src="/logow.png"
+                alt="Logo Zyfini"
+                className="w-6 h-6 object-contain"
+              />
             </div>
-            <span className="text-heading-lg font-semibold text-text-primary">TechVision</span>
+            <span className={`text-heading-xl font-semibold ${scrolled ? "text-black" : "text-white"}`}>
+              {t.nav.brand}
+            </span>
+
           </button>
 
           {/* Desktop Navigation */}
@@ -38,20 +61,25 @@ export default function Navigation() {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-body-md font-medium transition-colors duration-200 hover:text-accent-primary focus-ring rounded-md px-3 py-2 text-text-secondary"
+                className={`hover:underline underline-offset-4 text-body-md font-medium transition-colors duration-200 hover:text-accent-primary rounded-md px-3 py-2 ${scrolled ? "text-black" : "text-white"} focus:outline-none`}
               >
                 {item.label}
               </button>
             ))}
+
           </div>
 
+
+          {/* Language Selector */}
           <div className="hidden md:block">
-            <Button
-              onClick={() => scrollToSection("#contact")}
-              className="bg-accent-primary hover:bg-accent-hover text-white font-medium px-6 py-2.5 rounded-lg transition-colors duration-200 focus-ring"
+            <button
+              onClick={() => setLanguage(language === "id" ? "en" : "id")}
+              className="flex items-center gap-2 px-3 py-2 text-body-md font-medium text-text-secondary hover:text-accent-primary rounded-md transition duration-200"
             >
-              Get Started
-            </Button>
+              <span className="text-lg">🌐</span>
+              <span>{language === "id" ? "EN" : "ID"}</span>
+            </button>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,7 +102,8 @@ export default function Navigation() {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-body-md font-medium transition-colors duration-200 hover:text-accent-primary focus-ring rounded-md px-3 py-2 text-text-secondary text-left"
+                  className="text-body-md font-medium transition-colors duration-200 hover:text-accent-primary focus-ring rounded-md px-3 py-2 text-white text-left"
+
                 >
                   {item.label}
                 </button>
@@ -83,7 +112,7 @@ export default function Navigation() {
                 onClick={() => scrollToSection("#contact")}
                 className="bg-accent-primary hover:bg-accent-hover text-white font-medium px-6 py-2.5 rounded-lg transition-colors duration-200 focus-ring w-full mt-4"
               >
-                Get Started
+                {t.nav.getStarted}
               </Button>
             </div>
           </div>
