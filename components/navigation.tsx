@@ -42,11 +42,11 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button onClick={() => scrollToSection("#home")} className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-accent-primary rounded-xl flex items-center justify-center group-hover:bg-accent-hover transition-colors duration-200 overflow-hidden">
+            <div className="flex items-center justify-center duration-200 overflow-hidden">
               <img
                 src="/logow.png"
                 alt="Logo Zyfini"
-                className="w-6 h-6 object-contain"
+                className="w-13 h-13 object-contain"
               />
             </div>
             <span className={`text-heading-xl font-semibold ${scrolled ? "text-black" : "text-white"}`}>

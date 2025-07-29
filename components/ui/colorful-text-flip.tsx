@@ -24,7 +24,7 @@ export const ColorfulTextFlip = ({
     }, [words.length, interval])
 
     return (
-        <span className="bg-linear-to-r from-accent-primary via-accent-light to-accent-hover bg-clip-text text-transparent animate-pulse">
+        <span className="bg-linear-to-r from-accent-primary via-accent-light to-accent-hover bg-clip-text text-transparent">
             {words[index]}
         </span>
 

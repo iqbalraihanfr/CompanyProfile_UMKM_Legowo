@@ -12,7 +12,6 @@ import { Timeline } from "@/components/ui/timeline"
 import { ImageGallery } from "@/components/ui/image-gallery"
 import { MasonryGallery } from "@/components/ui/masonry-gallery"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
-import { StaggerContainer, StaggerItem } from "@/components/ui/stagger-container"
 import { useLanguage } from "@/contexts/language-context"
 
 import type React from "react"
@@ -291,8 +290,8 @@ export default function HomePage() {
     activeFilter === "all" ? portfolioImages : portfolioImages.filter((img) => img.category === activeFilter)
 
   return (
-
-    <div className="min-h-screen bg-background-primary">
+    <>
+      <div className="min-h-screen bg-background-primary">
       {/* Hero Section */}
       <section
         id="home"
@@ -348,23 +347,23 @@ export default function HomePage() {
 
       {/* Stats Section */}
       <section className="bg-[#c2c4c8]">
-        <ScrollReveal direction="up" className="px-6 py-16 bg-[#ffff]">
-          <StaggerContainer className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <ScrollReveal direction="up" className="px-6 py-16 bg-[#ffff] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
+          
             {[
               { number: "500+", label: t.statsec.label1 },
               { number: "100+", label: t.statsec.label2 },
               { number: "5+", label: t.statsec.label3 },
               { number: "24/7", label: t.statsec.label4 },
             ].map((stat, index) => (
-              <StaggerItem
+              <div
                 key={index}
                 className="text-center p-6 rounded-xl bg-[#001f3f] border border-border-primary hover:border-accent-primary/30 transition-colors duration-200"
               >
                 <div className="text-display-sm font-semibold text-accent-primary mb-2">{stat.number}</div>
                 <div className="text-body-sm text-[#ffff] font-medium">{stat.label}</div>
-              </StaggerItem>
+              </div>
             ))}
-          </StaggerContainer>
+          
         </ScrollReveal>
       </section>
       {/* Features Section */}
@@ -377,7 +376,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <StaggerContainer className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: t.featuressec.cardtitle1,
@@ -392,7 +391,7 @@ export default function HomePage() {
                 description: t.featuressec.cardwords3,
               },
             ].map((item, index) => (
-              <StaggerItem
+              <div
                 key={index}
                 className="p-8 rounded-xl bg-[#001f3f] border border-border-primary hover:border-accent-primary/30 transition-all duration-200 group"
               >
@@ -400,9 +399,9 @@ export default function HomePage() {
                   {item.title}
                 </h3>
                 <p className="text-body-md text-[#ffff] leading-relaxed">{item.description}</p>
-              </StaggerItem>
+              </div>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </ScrollReveal>
       </section>
@@ -577,7 +576,7 @@ export default function HomePage() {
             <ScrollReveal direction="right" delay={0.2} className="space-y-8">
               <div>
                 <h3 className="text-heading-xl font-semibold mb-8 text-text-primary">{t.contact.infoTitle}</h3>
-                <StaggerContainer className="space-y-6">
+                <div className="space-y-6">
                   {[
                     {
                       label: t.contact.address,
@@ -594,18 +593,17 @@ export default function HomePage() {
                       value: "+62 8121 767 4477",
                       description: "",
                     },
-
                   ].map((contact, index) => (
-                    <StaggerItem
+                    <div
                       key={index}
                       className="p-6 bg-[#f1ecec] rounded-lg border border-border-primary"
                     >
                       <h4 className="text-heading-lg font-semibold text-[#001f3f]">{contact.label}</h4>
                       <p className="text-body-md text-[#001f3f] font-medium">{contact.value}</p>
                       <p className="text-body-sm text-text-secondary">{contact.description}</p>
-                    </StaggerItem>
+                    </div>
                   ))}
-                </StaggerContainer>
+                </div>
               </div>
 
               {/* Office Hours */}
@@ -652,11 +650,11 @@ export default function HomePage() {
       <ScrollReveal direction="up" className="border-t border-border-primary px-6 py-12 bg-[#001f3f] ">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-3 mb-6">
-            <div className="w-10 h-10 bg-accent-primary rounded-xl flex items-center justify-center group-hover:bg-accent-hover transition-colors duration-200 overflow-hidden">
+            <div className="w-10 h-10 flex items-center justify-center group-hover:bg-accent-hover transition-colors duration-200 overflow-hidden">
               <img
                 src="/logow.png" // ganti dengan path/logo sesuai projekmu
                 alt="Logo Zyfini"
-                className="w-6 h-6 object-contain"
+                className="w-13 h-13 object-contain"
               />
             </div>
             <span className="text-heading-lg font-semibold text-[#ffff]">{t.footer.title}</span>
@@ -667,7 +665,8 @@ export default function HomePage() {
           <div className="text-body-sm text-text-secondary">© 2025 Zyfini Edukasi. All rights reserved.</div>
         </div>
       </ScrollReveal>
-    </div >
+    </div>
+    </>
   )
 }
 
