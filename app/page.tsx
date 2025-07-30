@@ -151,7 +151,7 @@ export default function HomePage() {
               <h4 className="text-heading-lg  font-semibold text-text-primary mb-3">
                 {t.companystory.wordtitle7}
               </h4>
-              <p className="text-body-md  text-[#dedede] leading-relaxed mb-6">
+              <p className="text-body-md  text-[#818181] leading-relaxed mb-6">
                 {t.companystory.wordtitle8}
               </p>
               <div className="grid md:grid-cols-2 gap-4">
