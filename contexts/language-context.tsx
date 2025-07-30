@@ -18,10 +18,10 @@ const translations = {
             portfolio: "Portfolio",
             contact: "Contact",
             getStarted: "Get Started",
-            brand: "Zyfini Education",
+            brand: " Legowo",
         },
         hero: {
-            title: "Zyfini Education",
+            title: "Legowo",
             flipWords: [
                 "Foster Creativity from an Early Age",
                 "Build Safe & Educational Playgrounds",
@@ -44,7 +44,7 @@ const translations = {
             label4: "Support Available",
         },
         featuressec: {
-            title: "Why Choose Zyfini Education?",
+            title: "Why Choose Legowo?",
             words: "We provide high-quality educational and decorative products to support children's learning and development holistically, while also enhancing your business with creative and functional solutions.",
             cardtitle1: "Innovative Products",
             cardwords1: "We continuously innovate in providing educational teaching aids (APE), indoor and outdoor play equipment, and home decorations that support child development and family comfort.",
@@ -55,13 +55,13 @@ const translations = {
 
         },
         aboutsec: {
-            title: "About Zyfini Edukasi",
-            words: "Established in 2018, Zyfini Edukasi has been a partner for MSMEs, schools, and institutions in need of educational teaching aids and business essentials such as indoor & outdoor APE, swings, home decor, data boards, and business stands.",
+            title: "About Legowo",
+            words: "Established in 2018, Legowo has been a partner for MSMEs, schools, and institutions in need of educational teaching aids and business essentials such as indoor & outdoor APE, swings, home decor, data boards, and business stands.",
 
         },
         companystory: {
             title0: "Our Story",
-            words1: "Founded in 2018, Zyfini Edukasi is a small enterprise (UKM) that manufactures educational toys made of wood and metal. We are committed to providing safe, high-quality products that holistically support children's development—cognitively, motorically, and socially.",
+            words1: "Founded in 2018, Legowo is a small enterprise (UKM) that manufactures educational toys made of wood and metal. We are committed to providing safe, high-quality products that holistically support children's development—cognitively, motorically, and socially.",
             words2: "With over 5 years of experience, we have gained the trust of many institutions and schools to provide indoor and outdoor educational play equipment (APE), learning space decorations, and other supporting tools.",
 
             title1: "Our Mission",
@@ -130,7 +130,7 @@ const translations = {
             },
         },
         footer: {
-            title: "Zyfini Edukasi",
+            title: "Legowo",
             subtitle: "Building the future of technology, one project at a time.",
         },
 
@@ -143,10 +143,10 @@ const translations = {
             portfolio: "Portofolio",
             contact: "Kontak",
             getStarted: "Mulai Sekarang",
-            brand: "Zyfini Edukasi",
+            brand: "Legowo",
         },
         hero: {
-            title: "Zyfini Edukasi",
+            title: "Legowo",
             flipWords: [
                 "Menumbuhkan Kreativitas Anak Sejak Dini",
                 "Membangun Ruang Bermain Edukatif & Aman",
@@ -168,7 +168,7 @@ const translations = {
             label4: "Dukungan Tersedia",
         },
         featuressec: {
-            title: "Mengapa Memilih Zyfini Edukasi?",
+            title: "Mengapa Memilih Legowo?",
             words: "Kami menghadirkan produk edukatif dan dekoratif berkualitas tinggi untuk mendukung proses belajar dan pengembangan anak secara menyeluruh, serta menunjang usaha Anda dengan solusi kreatif dan fungsional.",
             cardtitle1: "Produk Inovatif",
             cardwords1: "Kami terus berinovasi dalam menyediakan alat peraga edukatif (APE), permainan luar dan dalam ruangan, serta dekorasi rumah yang mendukung perkembangan anak dan kenyamanan keluarga.",
@@ -178,12 +178,12 @@ const translations = {
             cardwords3: "Dipercaya oleh ratusan sekolah, PAUD, TK, dan UMKM di seluruh Indonesia dengan lebih dari 500+ proyek dan pemesanan sukses.",
         },
         aboutsec: {
-            title: "Tentang Zyfini Edukasi",
-            words: " Berdiri sejak 2018, Zyfini Edukasi hadir sebagai mitra UMKM, sekolah, dan institusi yang membutuhkan solusi alat peraga edukatif dan kebutuhan usaha seperti APE indoor & outdoor, ayunan, home decor, papan data, serta stand usaha.",
+            title: "Tentang Legowo",
+            words: " Berdiri sejak 2018, Legowo hadir sebagai mitra UMKM, sekolah, dan institusi yang membutuhkan solusi alat peraga edukatif dan kebutuhan usaha seperti APE indoor & outdoor, ayunan, home decor, papan data, serta stand usaha.",
         },
         companystory: {
             title0: "Cerita Kami",
-            words1: " Zyfini Edukasi berdiri sejak 2018 sebagai UKM yang memproduksi mainan edukatif dari kayu dan besi. Kami berkomitmen menghadirkan produk yang aman, berkualitas, dan mendukung tumbuh kembang anak secara menyeluruh—baik dari sisi kognitif, motorik, maupun sosial.",
+            words1: " Legowo berdiri sejak 2018 sebagai UKM yang memproduksi mainan edukatif dari kayu dan besi. Kami berkomitmen menghadirkan produk yang aman, berkualitas, dan mendukung tumbuh kembang anak secara menyeluruh—baik dari sisi kognitif, motorik, maupun sosial.",
             words2: "  Dengan pengalaman lebih dari 5 tahun, kami telah dipercaya oleh banyak institusi dan sekolah untuk menyediakan alat permainan edukatif (APE) indoor dan outdoor, dekorasi ruang belajar, serta perlengkapan pendukung lainnya.",
             title1: "Misi Kami",
             words3: "Mendukung Tumbuh Kembang & Kreativitas",
@@ -248,7 +248,7 @@ const translations = {
             },
         },
         footer: {
-            title: "Zyfini Edukasi",
+            title: "Legowo",
             subtitle: "Membangun masa depan teknologi, satu proyek demi satu.",
         },
     },
