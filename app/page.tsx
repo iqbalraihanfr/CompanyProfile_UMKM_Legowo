@@ -222,7 +222,7 @@ export default function HomePage() {
     },
     {
       id: "5",
-      src: "/produk7.JPG",
+      src: "/produk15.JPG",
       title: "",
       category: "",
       height: 320,
@@ -238,7 +238,7 @@ export default function HomePage() {
     },
     {
       id: "7",
-      src: "/produk5.JPG",
+      src: "/produk19.JPG",
       title: "",
       category: "",
       height: 290,
@@ -254,7 +254,7 @@ export default function HomePage() {
     },
     {
       id: "9",
-      src: "/produk3.JPG",
+      src: "/produk20.JPG",
       title: "",
       category: "",
       height: 260,
@@ -284,6 +284,47 @@ export default function HomePage() {
       height: 370,
       description: "IoT device monitoring and control dashboard with predictive maintenance",
     },
+    {
+      id: "3",
+      src: "/produk13.JPG",
+      title: "",
+      category: "",
+      height: 280,
+      description: "Machine learning dashboard for predictive analytics and data visualization",
+    },
+    {
+      id: "11",
+      src: "/produk14.JPG",
+      title: "",
+      category: "",
+      height: 310,
+      description: "Social networking platform with real-time messaging and content sharing",
+    },
+    {
+      id: "3",
+      src: "/produk16.JPG",
+      title: "",
+      category: "",
+      height: 280,
+      description: "Machine learning dashboard for predictive analytics and data visualization",
+    },
+    {
+      id: "7",
+      src: "/produk17.JPG",
+      title: "",
+      category: "",
+      height: 290,
+      description: "Real-time logistics tracking application with GPS integration",
+    },
+    {
+      id: "11",
+      src: "/produk18.JPG",
+      title: "",
+      category: "",
+      height: 310,
+      description: "Social networking platform with real-time messaging and content sharing",
+    },
+
   ]
 
   const categories = ["all", "Web Development", "Mobile Development", "AI/ML", "Cloud Solutions", "UI/UX Design"]
@@ -293,66 +334,66 @@ export default function HomePage() {
   return (
     <>
       <div className="min-h-screen bg-background-primary">
-      {/* Hero Section */}
-      <section
-        id="home"
-        className="w-full min-h-screen px-0 mx-0 relative h-[100vh] flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/herro.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
-      >
-        {/* Overlay transparan navy */}
-        <div className="absolute inset-0 bg-[#001f3f] opacity-75 z-0" />
+        {/* Hero Section */}
+        <section
+          id="home"
+          className="w-full min-h-screen px-0 mx-0 relative h-[100vh] flex items-center justify-center"
+          style={{
+            backgroundImage: "url('/herro.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+          }}
+        >
+          {/* Overlay transparan navy */}
+          <div className="absolute inset-0 bg-[#001f3f] opacity-75 z-0" />
 
-        <ContainerScrollAnimation>
-          <div className="mt-25 px-6 py-20 lg:py-15">
-            <div className="max-w-4xl mx-auto text-center">
+          <ContainerScrollAnimation>
+            <div className="mt-25 px-6 py-20 lg:py-15">
+              <div className="max-w-4xl mx-auto text-center">
 
-              <h1 className="text-display-xl lg:text-[4rem] font-bold mb-6 leading-tight">
-                {t.hero.title}{" "}
-              </h1>
+                <h1 className="text-display-xl lg:text-[4rem] font-bold mb-6 leading-tight">
+                  {t.hero.title}{" "}
+                </h1>
 
-              <div className="mb-12 max-w-3xl mx-auto">
-                <TextType
-                  text={[t.hero.words,t.hero.words2,t.hero.words3,t.hero.words4]}
-                  className="text-body-lg leading-relaxed"
-                  typingSpeed={100}
-                  pauseDuration={2000}
-                  showCursor={true}
-                  cursorCharacter="|"
-                  deletingSpeed={100}
-                  loop={true}
-                />
-              </div>
+                <div className="mb-12 max-w-3xl mx-auto">
+                  <TextType
+                    text={[t.hero.words, t.hero.words2, t.hero.words3, t.hero.words4]}
+                    className="text-body-lg leading-relaxed"
+                    typingSpeed={100}
+                    pauseDuration={2000}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    deletingSpeed={100}
+                    loop={true}
+                  />
+                </div>
 
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                <button
-                  onClick={() => document.querySelector("#portfolio")?.scrollIntoView({ behavior: "smooth" })}
-                  className="bg-accent-primary rounded-xl hover:bg-accent-hover text-white font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring inline-flex items-center justify-center"
-                >
-                  {t.hero.button1}
-                </button>
-                <button
-                  onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}
-                  className="border border-white rounded-xl  bg-transparent text-[#ffff] hover:bg-[#ffff] hover:text-accent-primary font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring"
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                  <button
+                    onClick={() => document.querySelector("#portfolio")?.scrollIntoView({ behavior: "smooth" })}
+                    className="bg-accent-primary rounded-xl hover:bg-accent-hover text-white font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring inline-flex items-center justify-center"
+                  >
+                    {t.hero.button1}
+                  </button>
+                  <button
+                    onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}
+                    className="border border-white rounded-xl  bg-transparent text-[#ffff] hover:bg-[#ffff] hover:text-accent-primary font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring"
 
-                >
-                  {t.hero.button2}
-                </button>
+                  >
+                    {t.hero.button2}
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </ContainerScrollAnimation>
-      </section>
+          </ContainerScrollAnimation>
+        </section>
 
-      {/* Stats Section */}
-      <section className="bg-[#c2c4c8]">
-        <ScrollReveal direction="up" className="px-6 py-16 bg-[#ffff] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
-          
+        {/* Stats Section */}
+        <section className="bg-[#c2c4c8]">
+          <ScrollReveal direction="up" className="px-6 py-16 bg-[#ffff] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
+
             {[
               { number: "500+", label: t.statsec.label1 },
               { number: "100+", label: t.statsec.label2 },
@@ -367,309 +408,309 @@ export default function HomePage() {
                 <div className="text-body-sm text-[#ffff] font-medium">{stat.label}</div>
               </div>
             ))}
-          
+
+          </ScrollReveal>
+        </section>
+        {/* Features Section */}
+        <section className="bg-[#ffff]">        <ScrollReveal direction="up" delay={0.2} className="bg-[#ffff] px-6 py-20">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-display-md font-semibold mb-6 text-[#001f3f]">{t.featuressec.title}</h2>
+              <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                {t.featuressec.words}
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: t.featuressec.cardtitle1,
+                  description: t.featuressec.cardwords1,
+                },
+                {
+                  title: t.featuressec.cardtitle2,
+                  description: t.featuressec.cardwords2,
+                },
+                {
+                  title: t.featuressec.cardtitle3,
+                  description: t.featuressec.cardwords3,
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="p-8 rounded-xl bg-[#001f3f] border border-border-primary hover:border-accent-primary/30 transition-all duration-200 group"
+                >
+                  <h3 className="text-heading-xl font-semibold mb-4 text-accent-primary group-hover:text-accent-hover transition-colors duration-200">
+                    {item.title}
+                  </h3>
+                  <p className="text-body-md text-[#ffff] leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </ScrollReveal>
-      </section>
-      {/* Features Section */}
-      <section className="bg-[#ffff]">        <ScrollReveal direction="up" delay={0.2} className="bg-[#ffff] px-6 py-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-display-md font-semibold mb-6 text-[#001f3f]">{t.featuressec.title}</h2>
-            <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              {t.featuressec.words}
-            </p>
-          </div>
+        </section>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: t.featuressec.cardtitle1,
-                description: t.featuressec.cardwords1,
-              },
-              {
-                title: t.featuressec.cardtitle2,
-                description: t.featuressec.cardwords2,
-              },
-              {
-                title: t.featuressec.cardtitle3,
-                description: t.featuressec.cardwords3,
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="p-8 rounded-xl bg-[#001f3f] border border-border-primary hover:border-accent-primary/30 transition-all duration-200 group"
-              >
-                <h3 className="text-heading-xl font-semibold mb-4 text-accent-primary group-hover:text-accent-hover transition-colors duration-200">
-                  {item.title}
-                </h3>
-                <p className="text-body-md text-[#ffff] leading-relaxed">{item.description}</p>
+        {/* About Section */}
+        <section id="about" className="px-6 py-20 bg-gradient-to-b from-[#001f3f] to-white">
+          <div className="max-w-6xl mx-auto">
+            <ScrollReveal direction="up" className="text-center mb-20">
+              <h2 className="text-display-lg font-semibold mb-6 text-text-primary">{t.aboutsec.title}</h2>
+              <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                {t.aboutsec.words}
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={0.3}>
+              <Timeline data={timelineData} />
+            </ScrollReveal>
+
+            {/* Company Story */}
+            <ScrollReveal direction="up" delay={0.4} className="mt-20 grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-display-sm font-semibold mb-8 text-[#001f3f]">{t.companystory.title0}</h3>
+                <div className="space-y-6 text-body-md  leading-relaxed">
+                  <p className="text-[#001f3f]">
+                    {t.companystory.words1}
+                  </p>
+                  <p className="text-[#001f3f]">
+                    {t.companystory.words2}
+                  </p>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </ScrollReveal>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="px-6 py-20 bg-gradient-to-b from-[#001f3f] to-white">
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal direction="up" className="text-center mb-20">
-            <h2 className="text-display-lg font-semibold mb-6 text-text-primary">{t.aboutsec.title}</h2>
-            <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              {t.aboutsec.words}
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal direction="up" delay={0.3}>
-            <Timeline data={timelineData} />
-          </ScrollReveal>
-
-          {/* Company Story */}
-          <ScrollReveal direction="up" delay={0.4} className="mt-20 grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-display-sm font-semibold mb-8 text-[#001f3f]">{t.companystory.title0}</h3>
-              <div className="space-y-6 text-body-md  leading-relaxed">
-                <p className="text-[#001f3f]">
-                  {t.companystory.words1}
-                </p>
-                <p className="text-[#001f3f]">
-                  {t.companystory.words2}
-                </p>
+              <div className="rounded-xl p-8 flex items-center justify-center">
+                <img src="/logow.png" alt="Zyfini Logo" className="h-90 w-auto" />
               </div>
-            </div>
-            <div className="rounded-xl p-8 flex items-center justify-center">
-              <img src="/logow.png" alt="Zyfini Logo" className="h-90 w-auto" />
-            </div>
 
-          </ScrollReveal>
-        </div>
-      </section>
+            </ScrollReveal>
+          </div>
+        </section>
 
-      {/* Gallery Section */}
-      <section id="portfolio" className="bg-[#ffff] px-6 py-20">
-        <div className="max-w-7xl mx-auto">
-          <ScrollReveal direction="up" className="text-center mb-16">
-            <h2 className="text-display-lg font-semibold mb-6 text-[#001f3f]">  {t.gallerysec.title}</h2>
-            <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              {t.gallerysec.words}
-            </p>
-          </ScrollReveal>
+        {/* Gallery Section */}
+        <section id="portfolio" className="bg-[#ffff] px-6 py-20">
+          <div className="max-w-7xl mx-auto">
+            <ScrollReveal direction="up" className="text-center mb-16">
+              <h2 className="text-display-lg font-semibold mb-6 text-[#001f3f]">  {t.gallerysec.title}</h2>
+              <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                {t.gallerysec.words}
+              </p>
+            </ScrollReveal>
 
-          {/* Gallery */}
-          <ScrollReveal direction="up" delay={0.3} className="mb-16">
-            {viewMode === "grid" ? (
-              <ImageGallery images={filteredImages} />
-            ) : (
-              <MasonryGallery images={filteredImages} />
-            )}
-          </ScrollReveal>
+            {/* Gallery */}
+            <ScrollReveal direction="up" delay={0.3} className="mb-16">
+              {viewMode === "grid" ? (
+                <ImageGallery images={filteredImages} />
+              ) : (
+                <MasonryGallery images={filteredImages} />
+              )}
+            </ScrollReveal>
 
-          {/* Portfolio CTA */}
-          <ScrollReveal
-            direction="up"
-            delay={0.5}
-            className="text-center bg-[#001f3f] rounded-xl p-8 lg:p-12 border border-border-primary"
-          >
-            <h3 className="text-display-sm font-semibold mb-6 text-text-primary">{t.portocta.title}</h3>
-            <p className="text-body-lg text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
-              {t.portocta.words}
-            </p>
-            <Button
-              className="bg-accent-primary hover:bg-accent-hover text-white font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring"
-              onClick={() => window.open("https://portfolio.techvision.com", "_blank")}
+            {/* Portfolio CTA */}
+            <ScrollReveal
+              direction="up"
+              delay={0.5}
+              className="text-center bg-[#001f3f] rounded-xl p-8 lg:p-12 border border-border-primary"
             >
-              {t.portocta.button}
-            </Button>
-          </ScrollReveal>
-        </div>
-      </section>
+              <h3 className="text-display-sm font-semibold mb-6 text-text-primary">{t.portocta.title}</h3>
+              <p className="text-body-lg text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
+                {t.portocta.words}
+              </p>
+              <Button
+                className="bg-accent-primary hover:bg-accent-hover text-white font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring"
+                onClick={() => window.open("https://portfolio.techvision.com", "_blank")}
+              >
+                {t.portocta.button}
+              </Button>
+            </ScrollReveal>
+          </div>
+        </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="bg-[#001f3f] px-6 py-20">
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal direction="up" className="text-center mb-20">
-            <h2 className="text-display-lg font-semibold mb-6 text-text-primary">{t.contact.title}</h2>
-            <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              {t.contact.subtitle}
-            </p>
-          </ScrollReveal>
+        {/* Contact Section */}
+        <section id="contact" className="bg-[#001f3f] px-6 py-20">
+          <div className="max-w-6xl mx-auto">
+            <ScrollReveal direction="up" className="text-center mb-20">
+              <h2 className="text-display-lg font-semibold mb-6 text-text-primary">{t.contact.title}</h2>
+              <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                {t.contact.subtitle}
+              </p>
+            </ScrollReveal>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <ScrollReveal direction="left" delay={0.2}>
-              <Card className="bg-[#f1ecec] rounded-xl border-border-primary">
-                <CardContent className="p-8">
-                  <h3 className="text-heading-xl font-semibold mb-8 text-[#001f3f]"> {t.contact.formTitle}</h3>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Contact Form */}
+              <ScrollReveal direction="left" delay={0.2}>
+                <Card className="bg-[#f1ecec] rounded-xl border-border-primary">
+                  <CardContent className="p-8">
+                    <h3 className="text-heading-xl font-semibold mb-8 text-[#001f3f]"> {t.contact.formTitle}</h3>
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div>
+                          <label htmlFor="name" className="block text-body-md font-medium text-[#001f3f] mb-3">
+                            {t.contact.name}
+                          </label>
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            value={formData.name}
+                            onChange={handleChange}
+                            className="w-full px-4 py-3 bg-background-tertiary border border-border-primary rounded-lg focus:outline-hidden focus:ring-2 focus:ring-accent-primary focus:border-transparent text-text-primary placeholder-text-secondary transition-colors duration-200"
+                            placeholder="Your name"
+                          />
+                        </div>
+                        <div>
+                          <label htmlFor="email" className="block text-body-md font-medium text-[#001f3f] mb-3">
+                            {t.contact.email}
+                          </label>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            value={formData.email}
+                            onChange={handleChange}
+                            className="w-full px-4 py-3 bg-background-tertiary border border-border-primary rounded-lg focus:outline-hidden focus:ring-2 focus:ring-accent-primary focus:border-transparent text-text-primary placeholder-text-secondary transition-colors duration-200"
+                            placeholder="your@email.com"
+                          />
+                        </div>
+                      </div>
+
                       <div>
-                        <label htmlFor="name" className="block text-body-md font-medium text-[#001f3f] mb-3">
-                          {t.contact.name}
+                        <label htmlFor="company" className="block text-body-md font-medium text-[#001f3f] mb-3">
+                          {t.contact.company}
                         </label>
                         <input
                           type="text"
-                          id="name"
-                          name="name"
-                          required
-                          value={formData.name}
+                          id="company"
+                          name="company"
+                          value={formData.company}
                           onChange={handleChange}
                           className="w-full px-4 py-3 bg-background-tertiary border border-border-primary rounded-lg focus:outline-hidden focus:ring-2 focus:ring-accent-primary focus:border-transparent text-text-primary placeholder-text-secondary transition-colors duration-200"
-                          placeholder="Your name"
+                          placeholder="Your company name"
                         />
                       </div>
+
                       <div>
-                        <label htmlFor="email" className="block text-body-md font-medium text-[#001f3f] mb-3">
-                          {t.contact.email}
+                        <label htmlFor="message" className="block text-body-md font-medium text-[#001f3f] mb-3">
+                          {t.contact.message}
                         </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
+                        <textarea
+                          id="message"
+                          name="message"
                           required
-                          value={formData.email}
+                          rows={6}
+                          value={formData.message}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-background-tertiary border border-border-primary rounded-lg focus:outline-hidden focus:ring-2 focus:ring-accent-primary focus:border-transparent text-text-primary placeholder-text-secondary transition-colors duration-200"
-                          placeholder="your@email.com"
+                          className="w-full px-4 py-3 bg-background-tertiary border border-border-primary rounded-lg focus:outline-hidden focus:ring-2 focus:ring-accent-primary focus:border-transparent text-text-primary placeholder-text-secondary resize-none transition-colors duration-200"
+                          placeholder="Tell us about your project..."
                         />
                       </div>
-                    </div>
 
-                    <div>
-                      <label htmlFor="company" className="block text-body-md font-medium text-[#001f3f] mb-3">
-                        {t.contact.company}
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-background-tertiary border border-border-primary rounded-lg focus:outline-hidden focus:ring-2 focus:ring-accent-primary focus:border-transparent text-text-primary placeholder-text-secondary transition-colors duration-200"
-                        placeholder="Your company name"
-                      />
-                    </div>
+                      <Button
+                        type="submit"
+                        className="w-full bg-accent-primary hover:bg-accent-hover text-white font-medium text-body-lg py-4 rounded-lg transition-all duration-200 focus-ring"
+                      >
+                        {t.contact.button}
+                      </Button>
+                    </form>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
 
-                    <div>
-                      <label htmlFor="message" className="block text-body-md font-medium text-[#001f3f] mb-3">
-                        {t.contact.message}
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        required
-                        rows={6}
-                        value={formData.message}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-background-tertiary border border-border-primary rounded-lg focus:outline-hidden focus:ring-2 focus:ring-accent-primary focus:border-transparent text-text-primary placeholder-text-secondary resize-none transition-colors duration-200"
-                        placeholder="Tell us about your project..."
-                      />
-                    </div>
-
-                    <Button
-                      type="submit"
-                      className="w-full bg-accent-primary hover:bg-accent-hover text-white font-medium text-body-lg py-4 rounded-lg transition-all duration-200 focus-ring"
-                    >
-                      {t.contact.button}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            {/* Contact Information */}
-            <ScrollReveal direction="right" delay={0.2} className="space-y-8">
-              <div>
-                <h3 className="text-heading-xl font-semibold mb-8 text-text-primary">{t.contact.infoTitle}</h3>
-                <div className="space-y-6">
-                  {[
-                    {
-                      label: t.contact.address,
-                      value: "Jalan Peltu Wagiso, RT.02/RW.01, Kebaron, Tulangan, Sidoarjo, Tulangan, Jawa Timur, 61273",
-                      description: "",
-                    },
-                    {
-                      label: t.contact.email,
-                      value: "rusianaa965@gmail.com",
-                      description: "",
-                    },
-                    {
-                      label: t.contact.contact,
-                      value: "+62 8121 767 4477",
-                      description: "",
-                    },
-                  ].map((contact, index) => (
-                    <div
-                      key={index}
-                      className="p-6 rounded-xl bg-[#f1ecec] rounded-lg border border-border-primary"
-                    >
-                      <h4 className="text-heading-lg font-semibold text-[#001f3f]">{contact.label}</h4>
-                      <p className="text-body-md text-[#001f3f] font-medium">{contact.value}</p>
-                      <p className="text-body-sm text-text-secondary">{contact.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Office Hours */}
-              <Card className="bg-[#f1ecec] rounded-xl border-border-primary">
-                <CardContent className="p-6">
-                  <h4 className="text-heading-lg font-semibold text-[#001f3f] mb-4">{t.contact.officeHours}</h4>
-                  <div className="space-y-3 text-body-md">
-                    <div className="flex justify-between text-text-secondary">
-                      <span>{t.contact.days.monday}</span>
-                      <span className="text-[#001f3f] font-medium">8:00 AM - 5:00 PM</span>
-                    </div>
-                    <div className="flex justify-between text-text-secondary">
-                      <span>{t.contact.days.saturday}</span>
-                      <span className="text-[#001f3f] font-medium">9:00 AM - 2:00 PM</span>
-                    </div>
-                    <div className="flex justify-between text-text-secondary">
-                      <span>{t.contact.days.sunday}</span>
-                      <span className="text-[#001f3f]  font-medium">{t.contact.days.closed}</span>
-                    </div>
+              {/* Contact Information */}
+              <ScrollReveal direction="right" delay={0.2} className="space-y-8">
+                <div>
+                  <h3 className="text-heading-xl font-semibold mb-8 text-text-primary">{t.contact.infoTitle}</h3>
+                  <div className="space-y-6">
+                    {[
+                      {
+                        label: t.contact.address,
+                        value: "Jalan Peltu Wagiso, RT.02/RW.01, Kebaron, Tulangan, Sidoarjo, Tulangan, Jawa Timur, 61273",
+                        description: "",
+                      },
+                      {
+                        label: t.contact.email,
+                        value: "rusianaa965@gmail.com",
+                        description: "",
+                      },
+                      {
+                        label: t.contact.contact,
+                        value: "+62 8121 767 4477",
+                        description: "",
+                      },
+                    ].map((contact, index) => (
+                      <div
+                        key={index}
+                        className="p-6 rounded-xl bg-[#f1ecec] rounded-lg border border-border-primary"
+                      >
+                        <h4 className="text-heading-lg font-semibold text-[#001f3f]">{contact.label}</h4>
+                        <p className="text-body-md text-[#001f3f] font-medium">{contact.value}</p>
+                        <p className="text-body-sm text-text-secondary">{contact.description}</p>
+                      </div>
+                    ))}
                   </div>
-                </CardContent>
-              </Card>
+                </div>
 
-              {/* Quick Response */}
-              <Card className="overflow-hidden h-[350px] rounded-2xl border-accent-primary/20">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425.282431328586!2d112.62285067431763!3d-7.485680873816443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e026095e88e5%3A0xca152be7c293b8fb!2sJl.%20Peltu%20Wagiso%2C%20Kebaron%2C%20Kec.%20Tulangan%2C%20Kabupaten%20Sidoarjo%2C%20Jawa%20Timur%2061273!5e1!3m2!1sid!2sid!4v1753679255315!5m2!1sid!2sid"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </Card>
+                {/* Office Hours */}
+                <Card className="bg-[#f1ecec] rounded-xl border-border-primary">
+                  <CardContent className="p-6">
+                    <h4 className="text-heading-lg font-semibold text-[#001f3f] mb-4">{t.contact.officeHours}</h4>
+                    <div className="space-y-3 text-body-md">
+                      <div className="flex justify-between text-text-secondary">
+                        <span>{t.contact.days.monday}</span>
+                        <span className="text-[#001f3f] font-medium">8:00 AM - 5:00 PM</span>
+                      </div>
+                      <div className="flex justify-between text-text-secondary">
+                        <span>{t.contact.days.saturday}</span>
+                        <span className="text-[#001f3f] font-medium">9:00 AM - 2:00 PM</span>
+                      </div>
+                      <div className="flex justify-between text-text-secondary">
+                        <span>{t.contact.days.sunday}</span>
+                        <span className="text-[#001f3f]  font-medium">{t.contact.days.closed}</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Quick Response */}
+                <Card className="overflow-hidden h-[350px] rounded-2xl border-accent-primary/20">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425.282431328586!2d112.62285067431763!3d-7.485680873816443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e026095e88e5%3A0xca152be7c293b8fb!2sJl.%20Peltu%20Wagiso%2C%20Kebaron%2C%20Kec.%20Tulangan%2C%20Kabupaten%20Sidoarjo%2C%20Jawa%20Timur%2061273!5e1!3m2!1sid!2sid!4v1753679255315!5m2!1sid!2sid"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </Card>
 
 
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <ScrollReveal direction="up" className="border-t border-border-primary px-6 py-12 bg-[#001f3f] ">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-3 mb-6">
-            <div className="w-10 h-10 flex items-center justify-center group-hover:bg-accent-hover transition-colors duration-200 overflow-hidden">
-              <img
-                src="/logow.png" // ganti dengan path/logo sesuai projekmu
-                alt="Logo Zyfini"
-                className="w-13 h-13 object-contain"
-              />
+              </ScrollReveal>
             </div>
-            <span className="text-heading-lg font-semibold text-[#ffff]">{t.footer.title}</span>
           </div>
-          <p className="text-body-md text-text-secondary mb-6">
-            {t.footer.subtitle}
-          </p>
-          <div className="text-body-sm text-text-secondary">© 2025 Zyfini Edukasi. All rights reserved.</div>
-        </div>
-      </ScrollReveal>
-    </div>
+        </section>
+
+        {/* Footer */}
+        <ScrollReveal direction="up" className="border-t border-border-primary px-6 py-12 bg-[#001f3f] ">
+          <div className="max-w-6xl mx-auto text-center">
+            <div className="flex items-center justify-center space-x-3 mb-6">
+              <div className="w-10 h-10 flex items-center justify-center group-hover:bg-accent-hover transition-colors duration-200 overflow-hidden">
+                <img
+                  src="/logow.png" // ganti dengan path/logo sesuai projekmu
+                  alt="Logo Zyfini"
+                  className="w-13 h-13 object-contain"
+                />
+              </div>
+              <span className="text-heading-lg font-semibold text-[#ffff]">{t.footer.title}</span>
+            </div>
+            <p className="text-body-md text-text-secondary mb-6">
+              {t.footer.subtitle}
+            </p>
+            <div className="text-body-sm text-text-secondary">© 2025 Zyfini Edukasi. All rights reserved.</div>
+          </div>
+        </ScrollReveal>
+      </div>
     </>
   )
 }
