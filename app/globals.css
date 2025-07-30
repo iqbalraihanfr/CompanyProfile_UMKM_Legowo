@@ -16,29 +16,30 @@
   --color-border-primary: #404040;
   --color-border-secondary: #4a4a4a;
 
-  --font-sans: Inter, system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-plusJakartaSans: Plus Jakarta Sans, sans-serif;
 
   --text-display-xl: 4.5rem;
   --text-display-xl--line-height: 1.1;
-  --text-display-xl--font-weight: 600;
+  --text-display-xl--font-weight: 700;
   --text-display-lg: 3.75rem;
   --text-display-lg--line-height: 1.1;
-  --text-display-lg--font-weight: 600;
+  --text-display-lg--font-weight: 700;
   --text-display-md: 3rem;
   --text-display-md--line-height: 1.2;
-  --text-display-md--font-weight: 600;
+  --text-display-md--font-weight: 700;
   --text-display-sm: 2.25rem;
   --text-display-sm--line-height: 1.3;
-  --text-display-sm--font-weight: 600;
+  --text-display-sm--font-weight: 700;
   --text-heading-xl: 1.875rem;
   --text-heading-xl--line-height: 1.4;
-  --text-heading-xl--font-weight: 600;
+  --text-heading-xl--font-weight: 700;
   --text-heading-lg: 1.5rem;
   --text-heading-lg--line-height: 1.4;
-  --text-heading-lg--font-weight: 600;
+  --text-heading-lg--font-weight: 700;
   --text-heading-md: 1.25rem;
   --text-heading-md--line-height: 1.5;
-  --text-heading-md--font-weight: 500;
+  --text-heading-md--font-weight: 700;
   --text-body-lg: 1.125rem;
   --text-body-lg--line-height: 1.6;
   --text-body-lg--font-weight: 400;
@@ -92,19 +93,19 @@
   }
 
   h1 {
-    @apply text-display-lg font-semibold text-text-primary;
+    @apply text-display-lg font-bold text-text-primary;
   }
 
   h2 {
-    @apply text-display-sm font-semibold text-text-primary;
+    @apply text-display-sm font-bold text-text-primary;
   }
 
   h3 {
-    @apply text-heading-xl font-semibold text-text-primary;
+    @apply text-heading-xl font-bold text-text-primary;
   }
 
   h4 {
-    @apply text-heading-lg font-medium text-text-primary;
+    @apply text-heading-lg font-bold text-text-primary;
   }
 
   p {

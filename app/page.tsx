@@ -159,18 +159,18 @@ export default function HomePage() {
         <div className="space-y-6">
           <div className="flex items-start space-x-4">
             <div>
-              <h4 className="text-heading-lg font-semibold text-text-primary mb-3">
+              <h4 className="text-heading-lg  font-semibold text-text-primary mb-3">
                 {t.companystory.wordtitle7}
               </h4>
-              <p className="text-body-md text-[#dedede] leading-relaxed mb-6">
+              <p className="text-body-md  text-[#dedede] leading-relaxed mb-6">
                 {t.companystory.wordtitle8}
               </p>
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="p-4 bg-[#ffff]">
+                <div className="p-4 rounded-xl bg-[#ffff]">
                   <h5 className="text-heading-md font-semibold text-[#001f3f] mb-2">  {t.companystory.wordtitle9}</h5>
                   <p className="text-body-sm text-text-secondary">{t.companystory.wordtitle10}</p>
                 </div>
-                <div className="p-4 bg-[#ffff]">
+                <div className="p-4 rounded-xl bg-[#ffff]">
                   <h5 className="text-heading-md font-semibold text-[#001f3f] mb-2"> {t.companystory.wordtitle11}</h5>
                   <p className="text-body-sm text-text-secondary">
                     {t.companystory.wordtitle12}
@@ -311,7 +311,7 @@ export default function HomePage() {
           <div className="mt-25 px-6 py-20 lg:py-15">
             <div className="max-w-4xl mx-auto text-center">
 
-              <h1 className="text-display-xl lg:text-[4rem] font-semibold mb-6 leading-tight">
+              <h1 className="text-display-xl lg:text-[4rem] font-bold mb-6 leading-tight">
                 {t.hero.title}{" "}
               </h1>
 
@@ -332,13 +332,13 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                 <button
                   onClick={() => document.querySelector("#portfolio")?.scrollIntoView({ behavior: "smooth" })}
-                  className="bg-accent-primary hover:bg-accent-hover text-white font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring inline-flex items-center justify-center"
+                  className="bg-accent-primary rounded-xl hover:bg-accent-hover text-white font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring inline-flex items-center justify-center"
                 >
                   {t.hero.button1}
                 </button>
                 <button
                   onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}
-                  className="border border-white bg-transparent text-[#ffff] hover:bg-[#ffff] hover:text-accent-primary font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring"
+                  className="border border-white rounded-xl  bg-transparent text-[#ffff] hover:bg-[#ffff] hover:text-accent-primary font-medium text-body-lg px-8 py-4 rounded-lg transition-all duration-200 focus-ring"
 
                 >
                   {t.hero.button2}
@@ -428,11 +428,11 @@ export default function HomePage() {
           <ScrollReveal direction="up" delay={0.4} className="mt-20 grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-display-sm font-semibold mb-8 text-[#001f3f]">{t.companystory.title0}</h3>
-              <div className="space-y-6 text-body-md text-text-secondary leading-relaxed">
-                <p>
+              <div className="space-y-6 text-body-md  leading-relaxed">
+                <p className="text-[#001f3f]">
                   {t.companystory.words1}
                 </p>
-                <p>
+                <p className="text-[#001f3f]">
                   {t.companystory.words2}
                 </p>
               </div>
@@ -497,7 +497,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <ScrollReveal direction="left" delay={0.2}>
-              <Card className="bg-[#f1ecec] border-border-primary">
+              <Card className="bg-[#f1ecec] rounded-xl border-border-primary">
                 <CardContent className="p-8">
                   <h3 className="text-heading-xl font-semibold mb-8 text-[#001f3f]"> {t.contact.formTitle}</h3>
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -600,7 +600,7 @@ export default function HomePage() {
                   ].map((contact, index) => (
                     <div
                       key={index}
-                      className="p-6 bg-[#f1ecec] rounded-lg border border-border-primary"
+                      className="p-6 rounded-xl bg-[#f1ecec] rounded-lg border border-border-primary"
                     >
                       <h4 className="text-heading-lg font-semibold text-[#001f3f]">{contact.label}</h4>
                       <p className="text-body-md text-[#001f3f] font-medium">{contact.value}</p>
@@ -611,7 +611,7 @@ export default function HomePage() {
               </div>
 
               {/* Office Hours */}
-              <Card className="bg-[#f1ecec] border-border-primary">
+              <Card className="bg-[#f1ecec] rounded-xl border-border-primary">
                 <CardContent className="p-6">
                   <h4 className="text-heading-lg font-semibold text-[#001f3f] mb-4">{t.contact.officeHours}</h4>
                   <div className="space-y-3 text-body-md">
@@ -632,7 +632,7 @@ export default function HomePage() {
               </Card>
 
               {/* Quick Response */}
-              <Card className="overflow-hidden h-[350px] border-accent-primary/20">
+              <Card className="overflow-hidden h-[350px] rounded-2xl border-accent-primary/20">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425.282431328586!2d112.62285067431763!3d-7.485680873816443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e026095e88e5%3A0xca152be7c293b8fb!2sJl.%20Peltu%20Wagiso%2C%20Kebaron%2C%20Kec.%20Tulangan%2C%20Kabupaten%20Sidoarjo%2C%20Jawa%20Timur%2061273!5e1!3m2!1sid!2sid!4v1753679255315!5m2!1sid!2sid"
                   width="100%"
