@@ -77,6 +77,11 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
+              <div className="grid lg:grid-cols-2 gap-12 items-center rounded-2xl">
+              <img src="/produk1.JPG" alt="Mission Image" className="mt-6 rounded-lg shadow-lg max-w-xs " />
+              <img src="/produk2.JPG" alt="Mission Image 2" className="mt-6 rounded rounded-lg shadow-lg max-w-xs " />
+              </div>
+              
             </div>
           </div>
         </div>
@@ -503,20 +508,46 @@ export default function HomePage() {
 
         {/* About Section */}
         <section id="about" className="px-6 py-20 bg-gradient-to-b from-[#001f3f] to-white">
+          <div className="max-w-6xl mx-auto">
+          <ScrollReveal direction="up" delay={0.4} className="mt-20 grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-display-lg font-bold mb-8 text-text-primary">{t.companystory.title0}</h2>
+                <div className="space-y-6 text-body-md  leading-relaxed">
+                  <p className="text-text-secondary font-semibold text-display-s">
+                    {t.companystory.words1}
+                  </p>
+                  <p className="text-text-secondary font-semibold ">
+                    {t.companystory.words2}
+                  </p>
+                  <p className="text-text-secondary font-semibold ">
+                    {t.companystory.words5}
+                  </p>
+                  <p className="text-text-secondary font-semibold ">
+                    {t.companystory.words6}
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-xl p-8 flex items-center justify-center">
+                <img src="/logonavBaru.png" alt="Zyfini Logo" className="h-90 w-auto" />
+              </div>
+
+            </ScrollReveal>
+
+            {/* <ScrollReveal direction="up" className="text-left mb-20">
           <div className="lg:px-3 max-w-6xl mx-auto">
             <ScrollReveal direction="up" className="text-center mb-20">
               <h2 className="text-display-lg font-semibold mb-6 text-text-primary">{t.aboutsec.title}</h2>
-              <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+              <p className="text-body-lg text-left text-text-secondary max-w-3xl leading-relaxed">
                 {t.aboutsec.words}
               </p>
-            </ScrollReveal>
+            </ScrollReveal> */}
 
             <ScrollReveal direction="up" delay={0.3}>
               <Timeline data={timelineData} />
             </ScrollReveal>
 
             {/* Company Story */}
-            <ScrollReveal direction="up" delay={0.4} className="mt-20 grid lg:grid-cols-2 gap-12 items-center">
+            {/* <ScrollReveal direction="up" delay={0.4} className="mt-20 grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-display-sm font-semibold mb-8 text-[#001f3f]">{t.companystory.title0}</h3>
                 <div className="space-y-6 text-body-md  leading-relaxed">
@@ -532,7 +563,7 @@ export default function HomePage() {
                 <img src="/logonavBaru.png" alt="Zyfini Logo" className="h-90 w-auto" />
               </div>
 
-            </ScrollReveal>
+            </ScrollReveal> */}
           </div>
         </section>
 

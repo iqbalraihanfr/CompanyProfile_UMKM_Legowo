@@ -63,13 +63,15 @@ const translations = {
         },
         aboutsec: {
             title: "About Legowo",
-            words: "Established in 2018, Legowo has been a partner for MSMEs, schools, and institutions in need of educational teaching aids and business essentials such as indoor & outdoor APE, swings, home decor, data boards, and business stands.",
+            words: "Founded in 2018, Zyfini Edukasi is a small business that manufactures and provides educational wooden and metal toys for children. We specialize in the production of various other educational toys, with a primary focus on child safety and development.",
 
         },
         companystory: {
             title0: "Our Story",
             words1: "Founded in 2018, Legowo is a small enterprise (UKM) that manufactures educational toys made of wood and metal. We are committed to providing safe, high-quality products that holistically support children's development—cognitively, motorically, and socially.",
             words2: "With over 5 years of experience, we have gained the trust of many institutions and schools to provide indoor and outdoor educational play equipment (APE), learning space decorations, and other supporting tools.",
+            words5: "Our commitment to children's education is reflected in product designs that stimulate cognitive, motor, and social-emotional development. We continue to innovate in product development to meet the ever-evolving educational needs of children.",
+            words6: "With over 5 years of experience, we have built a solid reputation in the children's toy industry. We are proud to contribute to the growth and learning of the younger generation through our high-quality products.",
 
             title1: "Our Mission",
             words3: "Supporting Growth & Creativity",
@@ -192,12 +194,16 @@ const translations = {
         },
         aboutsec: {
             title: "Tentang Legowo",
-            words: " Berdiri sejak 2018, Legowo hadir sebagai mitra UMKM, sekolah, dan institusi yang membutuhkan solusi alat peraga edukatif dan kebutuhan usaha seperti APE indoor & outdoor, ayunan, home decor, papan data, serta stand usaha.",
+            words: "Didirikan pada tahun 2018, Zyfini Edukasi adalah UKM produsen produk dan penyedia jasa mainan kayu dan besi edukatif untuk anak-anak. Kami mengkhususkan diri dalam pembuatan berbagai mainan edukatif lainnya, dengan fokus utama pada keamanan dan perkembangan anak.",
         },
         companystory: {
             title0: "Cerita Kami",
             words1: " Legowo berdiri sejak 2018 sebagai UKM yang memproduksi mainan edukatif dari kayu dan besi. Kami berkomitmen menghadirkan produk yang aman, berkualitas, dan mendukung tumbuh kembang anak secara menyeluruh—baik dari sisi kognitif, motorik, maupun sosial.",
             words2: "  Dengan pengalaman lebih dari 5 tahun, kami telah dipercaya oleh banyak institusi dan sekolah untuk menyediakan alat permainan edukatif (APE) indoor dan outdoor, dekorasi ruang belajar, serta perlengkapan pendukung lainnya.",
+            words5: "Komitmen kami terhadap pendidikan anak-anak tercermin dalam desain produk yang merangsang perkembangan kognitif, motorik, dan sosial-emosional. Kami terus berinovasi dalam pengembangan produk untuk memenuhi kebutuhan pendidikan anak yang selalu berkembang.",
+            words6: "Dengan pengalaman lebih dari satu 5 tahun, kami telah membangun reputasi yang solid dalam industri mainan anak. Kami bangga dapat berkontribusi pada pertumbuhan dan pembelajaran generasi muda melalui produk-produk berkualitas kami.",
+
+
             title1: "Misi Kami",
             words3: "Mendukung Tumbuh Kembang & Kreativitas",
             words4: "Kami berkomitmen menyediakan produk edukatif dan dekoratif yang fungsional, aman, dan menarik guna menunjang pembelajaran dan usaha kecil.",
