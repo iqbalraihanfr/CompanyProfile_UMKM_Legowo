@@ -130,20 +130,7 @@ export default function HomePage() {
               </p>
               <div className="bg-[#ffff] rounded-xl p-6">
                 <h5 className="text-heading-md font-semibold text-[#b0b0b0] mb-3">{t.companystory.wordtitle5}</h5>
-                <div className="grid md:grid-cols-3 gap-4 text-center">
-                  <div>
-                    <div className="text-heading-xl font-semibold text-accent-primary">50+</div>
-                    <div className="text-body-sm text-text-secondary">{t.companystory.wordtitle13}</div>
-                  </div>
-                  <div>
-                    <div className="text-heading-xl font-semibold text-accent-primary">50+</div>
-                    <div className="text-body-sm text-text-secondary">{t.companystory.wordtitle14}</div>
-                  </div>
-                  <div>
-                    <div className="text-heading-xl font-semibold text-accent-primary">100+</div>
-                    <div className="text-body-sm text-text-secondary">{t.companystory.wordtitle15}</div>
-                  </div>
-                </div>
+               
               </div>
             </div>
           </div>
@@ -450,43 +437,68 @@ export default function HomePage() {
           </ScrollReveal>
         </section> */}
         {/* Features Section */}
-        <section className="bg-[#ffff]">        <ScrollReveal direction="up" delay={0.2} className="bg-[#ffff] px-6 py-20">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-display-md font-semibold mb-6 text-[#001f3f]">{t.featuressec.title}</h2>
-              <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-                {t.featuressec.words}
-              </p>
-            </div>
+        <section className="bg-white py-20 px-6">
+          <ScrollReveal direction="up" delay={0.2}>
+            <div className="max-w-6xl mx-auto">
+              <div className="text-left mb-16">
+                <h2 className="text-display-md font-semibold mb-4 text-[#001f3f]">{t.featuressec.title}</h2>
+                <div className="w-24 h-1 bg-[#ff8c00] mb-6"></div>
+                <p className="text-body-lg text-text-secondary max-w-3xl leading-relaxed">
+                  {t.featuressec.words}
+                </p>
+              </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: t.featuressec.cardtitle1,
-                  description: t.featuressec.cardwords1,
-                },
-                {
-                  title: t.featuressec.cardtitle2,
-                  description: t.featuressec.cardwords2,
-                },
-                {
-                  title: t.featuressec.cardtitle3,
-                  description: t.featuressec.cardwords3,
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="p-8 rounded-xl bg-[#001f3f] border border-border-primary hover:border-accent-primary/30 transition-all duration-200 group"
-                >
-                  <h3 className="text-heading-xl font-semibold mb-4 text-accent-primary group-hover:text-accent-hover transition-colors duration-200">
-                    {item.title}
-                  </h3>
-                  <p className="text-body-md text-[#ffff] leading-relaxed">{item.description}</p>
+              <div className="grid md:grid-cols-2 gap-16 items-center">
+                <div className="flex flex-col gap-y-6">
+                  {[
+                    {
+                      title: t.featuressec.cardtitle1,
+                      description: t.featuressec.cardwords1,
+                    },
+                    {
+                      title: t.featuressec.cardtitle2,
+                      description: t.featuressec.cardwords2,
+                    },
+                    {
+                      title: t.featuressec.cardtitle3,
+                      description: t.featuressec.cardwords3,
+                    },
+                    {
+                      title: "Inovasi Berkelanjutan",
+                      description: "Kami terus mengembangkan desain baru untuk memenuhi kebutuhan pendidikan anak yang selalu berkembang."
+                    },
+                    {
+                      title: "Ramah Lingkungan",
+                      description: "Komitmen kami pada penggunaan bahan alami dan proses produksi yang berkelanjutan."
+                    },
+                    {
+                      title: "Sentuhan Personal",
+                      description: "Nama Zyfini yang berasal dari gabungan nama anak-anak pendiri mencerminkan dedikasi dan nilai keluarga dalam bisnis kami."
+                    }
+                  ].map((item, index) => (
+                    <div key={index}>
+                      <h3 className="text-heading-sm font-semibold mb-2 text-[#001f3f]">
+                        {item.title}
+                      </h3>
+                      <p className="text-body-md text-text-secondary leading-relaxed">{item.description}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+
+                <div className="grid grid-cols-2 grid-rows-2 gap-4 h-[500px]">
+                    <div className="col-span-2 row-span-1 rounded-xl overflow-hidden">
+                        <img src="/produk18.JPG" alt="Feature 1" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="col-span-1 row-span-1 rounded-xl overflow-hidden">
+                        <img src="/produk2.JPG" alt="Feature 2" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="col-span-1 row-span-1 rounded-xl overflow-hidden">
+                        <img src="/produk3.JPG" alt="Feature 3" className="w-full h-full object-cover" />
+                    </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
         </section>
 
         {/* About Section */}
