@@ -44,7 +44,7 @@ export default function Navigation() {
           <button onClick={() => scrollToSection("#home")} className="flex items-center space-x-3 group">
             <div className="flex items-center justify-center duration-200 overflow-hidden">
               <img
-                src="/logow.png"
+                src="/logonavBaru.png"
                 alt="Logo Zyfini"
                 className="w-13 h-13 object-contain"
               />

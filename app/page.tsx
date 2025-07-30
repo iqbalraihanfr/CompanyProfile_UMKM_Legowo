@@ -89,30 +89,27 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                letter: "I",
+                letter: "",
                 title: t.companystory.cardtitle1,
                 description: t.companystory.wordtitle1,
               },
               {
-                letter: "F",
+                letter: "",
                 title: t.companystory.cardtitle2,
                 description: t.companystory.wordtitle2,
               },
               {
-                letter: "K",
+                letter: "",
                 title: t.companystory.cardtitle3,
                 description: t.companystory.wordtitle3,
               },
               {
-                letter: "T",
+                letter: "",
                 title: t.companystory.cardtitle4,
                 description: t.companystory.wordtitle5,
               },
             ].map((value, idx) => (
               <div key={idx} className="p-6 bg-[#ffff] rounded-xl border border-border-primary">
-                <div className="w-8 h-8 bg-accent-primary/10 rounded-lg flex items-center justify-center mb-3 border border-accent-primary/20">
-                  <span className="text-accent-primary font-bold">{value.letter}</span>
-                </div>
                 <h5 className="text-heading-md font-semibold text-[#001f3f] mb-2">{value.title}</h5>
                 <p className="text-body-sm text-text-secondary leading-relaxed">{value.description}</p>
               </div>
@@ -261,12 +258,12 @@ export default function HomePage() {
       description: "Containerized microservices architecture with auto-scaling",
     },
     {
-      id: "10",
+      id: "3",
       src: "/produk2.JPG",
       title: "",
       category: "",
-      height: 350,
-      description: "Complete brand identity design with logo and visual guidelines",
+      height: 280,
+      description: "Machine learning dashboard for predictive analytics and data visualization",
     },
     {
       id: "11",
@@ -285,45 +282,86 @@ export default function HomePage() {
       description: "IoT device monitoring and control dashboard with predictive maintenance",
     },
     {
-      id: "3",
+      id: "1",
       src: "/produk13.JPG",
       title: "",
       category: "",
-      height: 280,
-      description: "Machine learning dashboard for predictive analytics and data visualization",
+      height: 300,
+      description: "Modern e-commerce platform with advanced analytics and user management",
     },
     {
-      id: "11",
-      src: "/produk14.JPG",
+      id: "2",
+      src: "/produk3.JPG",
       title: "",
       category: "",
-      height: 310,
-      description: "Social networking platform with real-time messaging and content sharing",
+      height: 400,
+      description: "Secure financial mobile application with biometric authentication",
     },
     {
       id: "3",
-      src: "/produk16.JPG",
+      src: "/produk14.JPG",
       title: "",
       category: "",
       height: 280,
       description: "Machine learning dashboard for predictive analytics and data visualization",
     },
     {
-      id: "7",
+      id: "4",
       src: "/produk17.JPG",
+      title: "",
+      category: "",
+      height: 360,
+      description: "Scalable cloud architecture for enterprise-level applications",
+    },
+    {
+      id: "5",
+      src: "/produk18.JPG",
+      title: "",
+      category: "",
+      height: 320,
+      description: "Comprehensive design system with reusable components and guidelines",
+    },
+    {
+      id: "6",
+      src: "/produk16.JPG",
+      title: "",
+      category: "",
+      height: 340,
+      description: "Patient management system with telemedicine capabilities",
+    },
+    {
+      id: "7",
+      src: "/produk5.JPG",
       title: "",
       category: "",
       height: 290,
       description: "Real-time logistics tracking application with GPS integration",
     },
     {
-      id: "11",
-      src: "/produk18.JPG",
+      id: "8",
+      src: "/produk7.JPG",
       title: "",
       category: "",
-      height: 310,
-      description: "Social networking platform with real-time messaging and content sharing",
+      height: 380,
+      description: "Interactive data visualization platform for business intelligence",
     },
+    {
+      id: "12",
+      src: "/produk21.JPG",
+      title: "",
+      category: "",
+      height: 370,
+      description: "IoT device monitoring and control dashboard with predictive maintenance",
+    },
+    {
+      id: "10",
+      src: "/produk22.JPG",
+      title: "",
+      category: "",
+      height: 350,
+      description: "Complete brand identity design with logo and visual guidelines",
+    },
+
 
   ]
 
@@ -391,7 +429,7 @@ export default function HomePage() {
         </section>
 
         {/* Stats Section */}
-        <section className="bg-[#c2c4c8]">
+        {/* <section className="bg-[#c2c4c8]">
           <ScrollReveal direction="up" className="px-6 py-16 bg-[#ffff] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
 
             {[
@@ -410,7 +448,7 @@ export default function HomePage() {
             ))}
 
           </ScrollReveal>
-        </section>
+        </section> */}
         {/* Features Section */}
         <section className="bg-[#ffff]">        <ScrollReveal direction="up" delay={0.2} className="bg-[#ffff] px-6 py-20">
           <div className="max-w-6xl mx-auto">
@@ -479,7 +517,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="rounded-xl p-8 flex items-center justify-center">
-                <img src="/logow.png" alt="Zyfini Logo" className="h-90 w-auto" />
+                <img src="/logonavBaru.png" alt="Zyfini Logo" className="h-90 w-auto" />
               </div>
 
             </ScrollReveal>
@@ -697,7 +735,7 @@ export default function HomePage() {
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-10 h-10 flex items-center justify-center group-hover:bg-accent-hover transition-colors duration-200 overflow-hidden">
                 <img
-                  src="/logow.png" // ganti dengan path/logo sesuai projekmu
+                  src="/logonavBaru.png" // ganti dengan path/logo sesuai projekmu
                   alt="Logo Zyfini"
                   className="w-13 h-13 object-contain"
                 />
