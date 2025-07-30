@@ -78,10 +78,10 @@ export default function HomePage() {
                 ))}
               </ul>
               <div className="grid lg:grid-cols-2 gap-12 items-center rounded-2xl">
-              <img src="/produk1.JPG" alt="Mission Image" className="mt-6 rounded-lg shadow-lg max-w-xs " />
-              <img src="/produk2.JPG" alt="Mission Image 2" className="mt-6 rounded rounded-lg shadow-lg max-w-xs " />
+                <img src="/produk1.JPG" alt="Mission Image" className="mt-6 rounded-lg shadow-lg max-w-xs " />
+                <img src="/produk2.JPG" alt="Mission Image 2" className="mt-6 rounded rounded-lg shadow-lg max-w-xs " />
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -369,7 +369,7 @@ export default function HomePage() {
           id="home"
           className="w-full min-h-screen px-0 mx-0 relative h-[100vh] flex items-center justify-center"
           style={{
-            backgroundImage: "url('/herro.jpg')",
+            backgroundImage: "url('/herow.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
@@ -509,7 +509,7 @@ export default function HomePage() {
         {/* About Section */}
         <section id="about" className="px-6 py-20 bg-gradient-to-b from-[#001f3f] to-white">
           <div className="max-w-6xl mx-auto">
-          <ScrollReveal direction="up" delay={0.4} className="mt-20 grid lg:grid-cols-2 gap-12 items-center">
+            <ScrollReveal direction="up" delay={0.4} className="mt-20 grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-display-lg font-bold mb-8 text-text-primary">{t.companystory.title0}</h2>
                 <div className="space-y-6 text-body-md  leading-relaxed">
