@@ -116,7 +116,7 @@ export default function HomePage() {
             ].map((value, idx) => (
               <div key={idx} className="p-6 bg-[#ffff] rounded-xl border border-border-primary">
                 <h5 className="text-heading-md font-semibold text-[#001f3f] mb-2">{value.title}</h5>
-                <p className="text-body-sm text-text-secondary leading-relaxed">{value.description}</p>
+                <p className="text-body-sm text-[#818181] leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -135,7 +135,7 @@ export default function HomePage() {
               </p>
               <div className="bg-[#ffff] rounded-xl p-6">
                 <h5 className="text-heading-md font-semibold text-[#b0b0b0] mb-3">{t.companystory.wordtitle5}</h5>
-               
+
               </div>
             </div>
           </div>
@@ -157,11 +157,11 @@ export default function HomePage() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="p-4 rounded-xl bg-[#ffff]">
                   <h5 className="text-heading-md font-semibold text-[#001f3f] mb-2">  {t.companystory.wordtitle9}</h5>
-                  <p className="text-body-sm text-text-secondary">{t.companystory.wordtitle10}</p>
+                  <p className="text-body-sm text-[#818181]">{t.companystory.wordtitle10}</p>
                 </div>
                 <div className="p-4 rounded-xl bg-[#ffff]">
                   <h5 className="text-heading-md font-semibold text-[#001f3f] mb-2"> {t.companystory.wordtitle11}</h5>
-                  <p className="text-body-sm text-text-secondary">
+                  <p className="text-body-sm text-[#818181]">
                     {t.companystory.wordtitle12}
 
 
@@ -444,11 +444,11 @@ export default function HomePage() {
         {/* Features Section */}
         <section className="bg-white py-20 px-6">
           <ScrollReveal direction="up" delay={0.2}>
-            <div className="max-w-6xl mx-auto">
+            <div className="lg:px-3 max-w-6xl mx-auto">
               <div className="text-left mb-16">
                 <h2 className="text-display-md font-semibold mb-4 text-[#001f3f]">{t.featuressec.title}</h2>
                 <div className="w-24 h-1 bg-[#ff8c00] mb-6"></div>
-                <p className="text-body-lg text-text-secondary max-w-3xl leading-relaxed">
+                <p className="text-body-lg text-[#818181] max-w-3xl leading-relaxed">
                   {t.featuressec.words}
                 </p>
               </div>
@@ -469,37 +469,37 @@ export default function HomePage() {
                       description: t.featuressec.cardwords3,
                     },
                     {
-                      title: "Inovasi Berkelanjutan",
-                      description: "Kami terus mengembangkan desain baru untuk memenuhi kebutuhan pendidikan anak yang selalu berkembang."
+                      title: t.featuressec.cardtitle4,
+                      description: t.featuressec.cardwords4,
                     },
                     {
-                      title: "Ramah Lingkungan",
-                      description: "Komitmen kami pada penggunaan bahan alami dan proses produksi yang berkelanjutan."
+                      title: t.featuressec.cardtitle5,
+                      description: t.featuressec.cardwords5,
                     },
                     {
-                      title: "Sentuhan Personal",
-                      description: "Nama Zyfini yang berasal dari gabungan nama anak-anak pendiri mencerminkan dedikasi dan nilai keluarga dalam bisnis kami."
+                      title: t.featuressec.cardtitle6,
+                      description: t.featuressec.cardwords6,
                     }
                   ].map((item, index) => (
                     <div key={index}>
                       <h3 className="text-heading-sm font-semibold mb-2 text-[#001f3f]">
                         {item.title}
                       </h3>
-                      <p className="text-body-md text-text-secondary leading-relaxed">{item.description}</p>
+                      <p className="text-body-md text-[#818181] leading-relaxed">{item.description}</p>
                     </div>
                   ))}
                 </div>
 
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 h-[500px]">
-                    <div className="col-span-2 row-span-1 rounded-xl overflow-hidden">
-                        <img src="/produk18.JPG" alt="Feature 1" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="col-span-1 row-span-1 rounded-xl overflow-hidden">
-                        <img src="/produk2.JPG" alt="Feature 2" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="col-span-1 row-span-1 rounded-xl overflow-hidden">
-                        <img src="/produk3.JPG" alt="Feature 3" className="w-full h-full object-cover" />
-                    </div>
+                  <div className="col-span-2 row-span-1 rounded-xl overflow-hidden">
+                    <img src="/produk18.JPG" alt="Feature 1" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="col-span-1 row-span-1 rounded-xl overflow-hidden">
+                    <img src="/produk2.JPG" alt="Feature 2" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="col-span-1 row-span-1 rounded-xl overflow-hidden">
+                    <img src="/produk3.JPG" alt="Feature 3" className="w-full h-full object-cover" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -534,6 +534,8 @@ export default function HomePage() {
             </ScrollReveal>
 
             {/* <ScrollReveal direction="up" className="text-left mb-20">
+          <div className="lg:px-3 max-w-6xl mx-auto">
+            <ScrollReveal direction="up" className="text-center mb-20">
               <h2 className="text-display-lg font-semibold mb-6 text-text-primary">{t.aboutsec.title}</h2>
               <p className="text-body-lg text-left text-text-secondary max-w-3xl leading-relaxed">
                 {t.aboutsec.words}
@@ -567,10 +569,10 @@ export default function HomePage() {
 
         {/* Gallery Section */}
         <section id="portfolio" className="bg-[#ffff] px-6 py-20">
-          <div className="max-w-7xl mx-auto">
+          <div className="lg:px-15 max-w-7xl mx-auto">
             <ScrollReveal direction="up" className="text-center mb-16">
               <h2 className="text-display-lg font-semibold mb-6 text-[#001f3f]">  {t.gallerysec.title}</h2>
-              <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+              <p className="text-body-lg text-[#818181] max-w-3xl mx-auto leading-relaxed">
                 {t.gallerysec.words}
               </p>
             </ScrollReveal>
@@ -606,7 +608,7 @@ export default function HomePage() {
 
         {/* Contact Section */}
         <section id="contact" className="bg-[#001f3f] px-6 py-20">
-          <div className="max-w-6xl mx-auto">
+          <div className="lg:px-10 max-w-6xl mx-auto">
             <ScrollReveal direction="up" className="text-center mb-20">
               <h2 className="text-display-lg font-semibold mb-6 text-text-primary">{t.contact.title}</h2>
               <p className="text-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
@@ -735,15 +737,15 @@ export default function HomePage() {
                   <CardContent className="p-6">
                     <h4 className="text-heading-lg font-semibold text-[#001f3f] mb-4">{t.contact.officeHours}</h4>
                     <div className="space-y-3 text-body-md">
-                      <div className="flex justify-between text-text-secondary">
+                      <div className="flex justify-between text-[#818181]">
                         <span>{t.contact.days.monday}</span>
                         <span className="text-[#001f3f] font-medium">8:00 AM - 5:00 PM</span>
                       </div>
-                      <div className="flex justify-between text-text-secondary">
+                      <div className="flex justify-between text-[#818181]">
                         <span>{t.contact.days.saturday}</span>
                         <span className="text-[#001f3f] font-medium">9:00 AM - 2:00 PM</span>
                       </div>
-                      <div className="flex justify-between text-text-secondary">
+                      <div className="flex justify-between text-[#818181]">
                         <span>{t.contact.days.sunday}</span>
                         <span className="text-[#001f3f]  font-medium">{t.contact.days.closed}</span>
                       </div>
@@ -786,7 +788,7 @@ export default function HomePage() {
             <p className="text-body-md text-text-secondary mb-6">
               {t.footer.subtitle}
             </p>
-            <div className="text-body-sm text-text-secondary">© 2025 Zyfini Edukasi. All rights reserved.</div>
+            <div className="text-body-sm text-text-secondary">© 2025 Legowo. All rights reserved.</div>
           </div>
         </ScrollReveal>
       </div>

@@ -39,7 +39,8 @@ export default function Navigation() {
       className={`fixed top-0 w-full z-50 transition-colors duration-300 ${scrolled ? "bg-white" : "bg-transparent"
         }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-15 py-4">
+
         <div className="flex items-center justify-between">
           <button onClick={() => scrollToSection("#home")} className="flex items-center space-x-3 group">
             <div className="flex items-center justify-center duration-200 overflow-hidden">
