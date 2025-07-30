@@ -77,6 +77,11 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
+              <div className="grid lg:grid-cols-2 gap-12 items-center rounded-2xl">
+              <img src="/produk1.JPG" alt="Mission Image" className="mt-6 rounded-lg shadow-lg max-w-xs " />
+              <img src="/produk2.JPG" alt="Mission Image 2" className="mt-6 rounded rounded-lg shadow-lg max-w-xs " />
+              </div>
+              
             </div>
           </div>
         </div>
